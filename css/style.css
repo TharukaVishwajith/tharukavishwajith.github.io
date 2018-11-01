@@ -82,3 +82,57 @@ footer.page-footer {
 .page-footer {
   padding-top: 5px;
 }
+
+.contact-social-media {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-social-media li {
+  display: inline;
+  padding: 10px;
+}
+.contact-social-media a{
+  color: #030460;
+}
+
+.contact-social-media a:hover{
+  color: #ff6a00;
+}
+
+.btn, .btn-large, .btn-small{
+  background: #6a6db2;
+}
+
+.btn:hover, .btn-large, .btn-small:hover{
+  background: #ff6a00;
+}
+
+ /* label color */
+ .input-field label {
+  color: #030460;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: #030460;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #030460;
+  box-shadow: 0 1px 0 0 #030460;
+}
+/* valid color */
+.input-field input[type=text].valid {
+  border-bottom: 1px solid #030460;
+  box-shadow: 0 1px 0 0 #030460;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+  border-bottom: 1px solid #0ff6a000;
+  box-shadow: 0 1px 0 0 #ff6a00;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: #030460;
+}
