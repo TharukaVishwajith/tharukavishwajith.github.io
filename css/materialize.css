@@ -4,11 +4,11 @@
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
 .materialize-red {
-  background-color: #ffffff !important;
+  background-color: #030460 !important;
 }
 
 .materialize-red-text {
-  color: #ffffff !important;
+  color: #ff0000 !important;
 }
 
 .materialize-red.lighten-5 {
@@ -4268,8 +4268,8 @@ table span.badge {
 }
 
 nav {
-  color: #fff;
-  background-color: #ee6e73;
+  color: #e5e5f2;
+  background-color: #030460;
   width: 100%;
   height: 56px;
   line-height: 56px;

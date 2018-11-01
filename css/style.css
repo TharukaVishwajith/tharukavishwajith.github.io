@@ -8,9 +8,19 @@
 
 nav ul a,
 nav .brand-logo {
-  color: #444;
+  color: #e5e5f2;
 }
 
+nav ul a:hover {
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #1f227f;
+  display: block;
+  padding: 0 15px;
+  cursor: pointer;
+}
 p {
   line-height: 2rem;
 }
@@ -59,4 +69,12 @@ footer.page-footer {
 .worked-places-title{
   text-align: left;
   padding: 5%
+}
+
+.page-footer .footer-copyright{
+  background-color: #030460;
+}
+
+.teal{
+  background-color: #2d3293 !important;
 }
