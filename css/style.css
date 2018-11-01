@@ -15,8 +15,8 @@ nav ul a:hover {
   -webkit-transition: background-color .3s;
   transition: background-color .3s;
   font-size: 1rem;
-  color: #fff;
-  background-color: #1f227f;
+  /* color: #ff6a00; */
+  background-color: #6a6db2;
   display: block;
   padding: 0 15px;
   cursor: pointer;
@@ -76,5 +76,9 @@ footer.page-footer {
 }
 
 .teal{
-  background-color: #2d3293 !important;
+  background-color: #ff6a00 !important;
+}
+
+.page-footer {
+  padding-top: 5px;
 }
