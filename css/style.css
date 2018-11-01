@@ -136,3 +136,21 @@ footer.page-footer {
 .input-field .prefix.active {
   color: #030460;
 }
+
+.bottom-border{
+  border-bottom: 2px solid #ff6a00;
+}
+
+.top-border{
+  border-top: 4px solid #ff6a00;
+}
+.top-bottom-border{
+  border-bottom: 2px solid #030460;
+  border-top: 4px solid #ff6a00;
+}
+
+.about-me-img{
+  border: 5px solid #e0e0e0;
+  border-radius: 50%;
+  width: 20%;
+}
