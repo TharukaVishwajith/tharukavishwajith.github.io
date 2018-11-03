@@ -169,10 +169,18 @@ footer.page-footer {
 
 @media  (min-width: 0px) and (max-width: 769px){
 
+  #logo-container{
+    display: none;
+  }
+
   .about-me-img{
     border: 5px solid #e0e0e0;
     border-radius: 50%;
     width: 150px;
+  }
+
+  .btn-cv{
+    display: none;
   }
 }
 
@@ -196,4 +204,11 @@ h1 , h5{
   width: 100%;
   top: 0;
   left: 0;
+}
+
+.btn-cv{
+  float: right;
+  margin-left: 3%;
+  margin-right: -6%;
+  margin-top: 13px;
 }
