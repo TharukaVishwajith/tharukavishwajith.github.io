@@ -159,6 +159,10 @@ footer.page-footer {
 
 @media only screen and (min-width: 769px){
 
+  .logo-mob{
+    display: none !important;
+  }
+
   .header-desck{
     display: block;
   }
