@@ -1,0 +1,1005 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY resume "https://tharukavishwajith.github.io/resume.owl#" >
+]>
+
+
+<rdf:RDF xmlns="https://tharukavishwajith.github.io//resume.owl#"
+     xml:base="https://tharukavishwajith.github.io//resume.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:resume="https://tharukavishwajith.github.io/resume.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="https://tharukavishwajith.github.io/resume.owl">
+        <owl:versionIRI rdf:resource="https://tharukavishwajith.github.io/resume.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#employedIn -->
+
+    <owl:ObjectProperty rdf:about="&resume;employedIn">
+        <rdfs:label>employedIn</rdfs:label>
+        <rdfs:comment>The company where the person is/was employed.</rdfs:comment>
+        <rdfs:range rdf:resource="&resume;Company"/>
+        <rdfs:domain rdf:resource="&resume;WorkHistory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#followedCourse -->
+
+    <owl:ObjectProperty rdf:about="&resume;followedCourse">
+        <rdfs:label>followedCourse</rdfs:label>
+        <rdfs:comment>The courses person followed.</rdfs:comment>
+        <rdfs:range rdf:resource="&resume;Course"/>
+        <rdfs:domain rdf:resource="&resume;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#has -->
+
+    <owl:ObjectProperty rdf:about="&resume;has">
+        <rdfs:domain rdf:resource="&resume;Person"/>
+        <rdfs:range rdf:resource="&resume;WorkHistory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#hasOrganization -->
+
+    <owl:ObjectProperty rdf:about="&resume;hasOrganization">
+        <rdfs:domain rdf:resource="&resume;Clubs_and_Socities"/>
+        <rdfs:range rdf:resource="&resume;Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#hasSkill -->
+
+    <owl:ObjectProperty rdf:about="&resume;hasSkill">
+        <rdfs:domain rdf:resource="&resume;Person"/>
+        <rdfs:range rdf:resource="&resume;Skill"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#offeredBy -->
+
+    <owl:ObjectProperty rdf:about="&resume;offeredBy">
+        <rdfs:domain rdf:resource="&resume;Course"/>
+        <rdfs:domain rdf:resource="&resume;Degree"/>
+        <rdfs:range rdf:resource="&resume;EducationalOrg"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#readingFor -->
+
+    <owl:ObjectProperty rdf:about="&resume;readingFor">
+        <rdfs:range rdf:resource="&resume;Degree"/>
+        <rdfs:domain rdf:resource="&resume;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#studiedAt -->
+
+    <owl:ObjectProperty rdf:about="&resume;studiedAt">
+        <rdfs:range rdf:resource="&resume;EducationalOrg"/>
+        <rdfs:domain rdf:resource="&resume;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#studying -->
+
+    <owl:ObjectProperty rdf:about="&resume;studying">
+        <rdfs:range rdf:resource="&resume;EducationalOrg"/>
+        <rdfs:domain rdf:resource="&resume;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#wasMember -->
+
+    <owl:ObjectProperty rdf:about="&resume;wasMember">
+        <rdfs:domain rdf:resource="&resume;Person"/>
+        <rdfs:range rdf:resource="&resume;Sport"/>
+        <rdfs:range rdf:resource="&resume;VolunteerOrg"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://kanushka.github.io/resume-gayan-ontology.owl#careerLevel -->
+
+    <owl:DatatypeProperty rdf:about="https://kanushka.github.io/resume-gayan-ontology.owl#careerLevel">
+        <rdfs:label>careerLevel</rdfs:label>
+        <rdfs:comment>Career level for the position in company.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&resume;WorkHistory"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://kanushka.github.io/resume-gayan-ontology.owl#gender -->
+
+    <owl:DatatypeProperty rdf:about="https://kanushka.github.io/resume-gayan-ontology.owl#gender">
+        <rdfs:label>gender</rdfs:label>
+        <rdfs:comment>Gender property (man/woman)</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&resume;Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#Designation -->
+
+    <owl:DatatypeProperty rdf:about="&resume;Designation">
+        <rdfs:label>designation</rdfs:label>
+        <rdfs:comment>Designation of the person</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&resume;Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#Locality -->
+
+    <owl:DatatypeProperty rdf:about="&resume;Locality">
+        <rdfs:label>Locality</rdfs:label>
+        <rdfs:comment>Region / state of the company.</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&resume;Organization"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#Name -->
+
+    <owl:DatatypeProperty rdf:about="&resume;Name">
+        <rdfs:label>Name</rdfs:label>
+        <rdfs:comment>Name of the company</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&resume;Organization"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#address -->
+
+    <owl:DatatypeProperty rdf:about="&resume;address">
+        <rdfs:label>address</rdfs:label>
+        <rdfs:comment>address of person</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&resume;Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#birthPlace -->
+
+    <owl:DatatypeProperty rdf:about="&resume;birthPlace">
+        <rdfs:label>birthPlace</rdfs:label>
+        <rdfs:comment>Place of birth the person</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&resume;Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#birthday -->
+
+    <owl:DatatypeProperty rdf:about="&resume;birthday">
+        <rdfs:label>birthday</rdfs:label>
+        <rdfs:comment>birthday of person.
+Format: YYYY-MM-DD
+May containt only year or year and month.</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&resume;Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#contactNumber -->
+
+    <owl:DatatypeProperty rdf:about="&resume;contactNumber">
+        <rdfs:label>contactNumber</rdfs:label>
+        <rdfs:comment>Contact number of person</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&resume;Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#courceDescription -->
+
+    <owl:DatatypeProperty rdf:about="&resume;courceDescription">
+        <rdfs:label>courseDescription</rdfs:label>
+        <rdfs:comment>Description of the course / certification.</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&resume;Course"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#courseFinishDate -->
+
+    <owl:DatatypeProperty rdf:about="&resume;courseFinishDate">
+        <rdfs:label>courseFinishDate</rdfs:label>
+        <rdfs:comment>Date when course was finished / certification acquired.
+Format: YYYY-MM-DD</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&resume;Course"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#courseStartDate -->
+
+    <owl:DatatypeProperty rdf:about="&resume;courseStartDate">
+        <rdfs:label>courseStartDate</rdfs:label>
+        <rdfs:comment>Start date of the course taken.
+Format: YYYY-MM-DD</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&resume;Course"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#courseTitle -->
+
+    <owl:DatatypeProperty rdf:about="&resume;courseTitle">
+        <rdfs:label>courseTitle</rdfs:label>
+        <rdfs:comment>Title of the course taken or certification acquired.</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&resume;Course"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#degreeTitle -->
+
+    <owl:DatatypeProperty rdf:about="&resume;degreeTitle">
+        <rdfs:label>degreeTitle</rdfs:label>
+        <rdfs:comment>Type (title) of the degree.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&resume;Degree"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#email -->
+
+    <owl:DatatypeProperty rdf:about="&resume;email">
+        <rdfs:label>emaill</rdfs:label>
+        <rdfs:comment>email of person</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&resume;Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#endDate -->
+
+    <owl:DatatypeProperty rdf:about="&resume;endDate">
+        <rdfs:label>endDate</rdfs:label>
+        <rdfs:comment>End date of employment.
+Format: YYYY-MM-DD
+May containt only year or year and month.</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&resume;WorkHistory"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#hasNationallity -->
+
+    <owl:DatatypeProperty rdf:about="&resume;hasNationallity">
+        <rdfs:label>hasNationality</rdfs:label>
+        <rdfs:comment>Person&apos;s nationality.</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&resume;Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#jobDescription -->
+
+    <owl:DatatypeProperty rdf:about="&resume;jobDescription">
+        <rdfs:label>jobDescription</rdfs:label>
+        <rdfs:comment>Description of the job in company.</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&resume;WorkHistory"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#jobTitle -->
+
+    <owl:DatatypeProperty rdf:about="&resume;jobTitle">
+        <rdfs:label>jobTitle</rdfs:label>
+        <rdfs:comment>Title in the company.</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&resume;WorkHistory"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#lngSkillLevelReading -->
+
+    <owl:DatatypeProperty rdf:about="&resume;lngSkillLevelReading">
+        <rdfs:comment>Reading level of language skill. (0..5)</rdfs:comment>
+        <rdfs:seeAlso>lngSkillLevelReading</rdfs:seeAlso>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&resume;LanguageSkill"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#lngSkillLevelWritten -->
+
+    <owl:DatatypeProperty rdf:about="&resume;lngSkillLevelWritten">
+        <rdfs:label>lngSkillLevelWritten</rdfs:label>
+        <rdfs:comment>Level of writing skills for language. (0..5)</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&resume;LanguageSkill"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#orgAddress -->
+
+    <owl:DatatypeProperty rdf:about="&resume;orgAddress">
+        <rdfs:label>orgAddress</rdfs:label>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&resume;Organization"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#personName -->
+
+    <owl:DatatypeProperty rdf:about="&resume;personName">
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&resume;Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#skillLevel -->
+
+    <owl:DatatypeProperty rdf:about="&resume;skillLevel">
+        <rdfs:label>skillLevel</rdfs:label>
+        <rdfs:comment>Level of the skill (0..5)</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&resume;Skill"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#skillName -->
+
+    <owl:DatatypeProperty rdf:about="&resume;skillName">
+        <rdfs:label>skillName</rdfs:label>
+        <rdfs:comment>Name of the skill</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&resume;Skill"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#skillYearsExperience -->
+
+    <owl:DatatypeProperty rdf:about="&resume;skillYearsExperience">
+        <rdfs:label>skillYearsExperience</rdfs:label>
+        <rdfs:comment>Year of experience in this skill.</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&resume;Skill"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#sportName -->
+
+    <owl:DatatypeProperty rdf:about="&resume;sportName">
+        <rdfs:label>sportName</rdfs:label>
+        <rdfs:comment>Name of the sport</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&resume;Sport"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#startDate -->
+
+    <owl:DatatypeProperty rdf:about="&resume;startDate">
+        <rdfs:label>startDate</rdfs:label>
+        <rdfs:comment>Start date of employment.
+Format: YYYY-MM-DD
+May containt only year or year and month.</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&resume;WorkHistory"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#CVEntry -->
+
+    <owl:Class rdf:about="&resume;CVEntry">
+        <rdfs:label>CVEntry</rdfs:label>
+        <rdfs:comment>Single entry of CV information. Type of CV information specified in subclasses</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#Clubs_and_Socities -->
+
+    <owl:Class rdf:about="&resume;Clubs_and_Socities">
+        <rdfs:label>ClubsAndSocities</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resume;CVEntry"/>
+    </owl:Class>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#Company -->
+
+    <owl:Class rdf:about="&resume;Company">
+        <rdfs:label>Company</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resume;Organization"/>
+        <rdfs:comment>A class for company information.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#Course -->
+
+    <owl:Class rdf:about="&resume;Course">
+        <rdfs:label>Course</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resume;Education"/>
+        <rdfs:comment>CV entry for courses taken</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#Degree -->
+
+    <owl:Class rdf:about="&resume;Degree">
+        <rdfs:label>Degree</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resume;Education"/>
+    </owl:Class>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#Education -->
+
+    <owl:Class rdf:about="&resume;Education">
+        <rdfs:label>Education</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resume;CVEntry"/>
+        <rdfs:comment>CV entry for education</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#EducationalInstitutes -->
+
+    <owl:Class rdf:about="&resume;EducationalInstitutes">
+        <rdfs:label>EducationalInstitue</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resume;EducationalOrg"/>
+        <rdfs:comment>Class of Educational Institue.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#EducationalOrg -->
+
+    <owl:Class rdf:about="&resume;EducationalOrg">
+        <rdfs:label>EducationalOrg</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resume;Organization"/>
+        <rdfs:comment>Educational organization (university, ...)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#LanguageSkill -->
+
+    <owl:Class rdf:about="&resume;LanguageSkill">
+        <rdfs:label>LanguageSkill</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resume;Skill"/>
+    </owl:Class>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#Organization -->
+
+    <owl:Class rdf:about="&resume;Organization">
+        <rdfs:label>Organization</rdfs:label>
+        <rdfs:comment>General class for organizations</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#Person -->
+
+    <owl:Class rdf:about="&resume;Person">
+        <rdfs:label>Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#References -->
+
+    <owl:Class rdf:about="&resume;References">
+        <rdfs:label>References</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resume;CVEntry"/>
+        <rdfs:comment>Reference people for the cv</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#School -->
+
+    <owl:Class rdf:about="&resume;School">
+        <rdfs:label>School</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resume;EducationalOrg"/>
+        <rdfs:comment>Class for school information.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#Skill -->
+
+    <owl:Class rdf:about="&resume;Skill">
+        <rdfs:label>Skill</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resume;CVEntry"/>
+        <rdfs:comment>CV entry for description of skills</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#SoftSkill -->
+
+    <owl:Class rdf:about="&resume;SoftSkill">
+        <rdfs:subClassOf rdf:resource="&resume;Skill"/>
+    </owl:Class>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#Sport -->
+
+    <owl:Class rdf:about="&resume;Sport">
+        <rdfs:label xml:lang="en">Sport</rdfs:label>
+        <rdfs:comment xml:lang="en">General class for sports</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#SportHistory -->
+
+    <owl:Class rdf:about="&resume;SportHistory">
+        <rdfs:label>Sports</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resume;CVEntry"/>
+    </owl:Class>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#TechSkill -->
+
+    <owl:Class rdf:about="&resume;TechSkill">
+        <rdfs:subClassOf rdf:resource="&resume;Skill"/>
+    </owl:Class>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#University -->
+
+    <owl:Class rdf:about="&resume;University">
+        <rdfs:label>University</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resume;EducationalOrg"/>
+        <rdfs:comment>Class for university information.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#VolunteerOrg -->
+
+    <owl:Class rdf:about="&resume;VolunteerOrg">
+        <rdfs:subClassOf rdf:resource="&resume;Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#WorkHistory -->
+
+    <owl:Class rdf:about="&resume;WorkHistory">
+        <rdfs:label>WorkHistory</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resume;CVEntry"/>
+        <rdfs:comment>CV entry for work history</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#company-entrust -->
+
+    <owl:NamedIndividual rdf:about="&resume;company-entrust">
+        <rdf:type rdf:resource="&resume;Company"/>
+        <resume:Locality>US</resume:Locality>
+        <resume:Name>Entrust and Title</resume:Name>
+        <resume:degreeTitle>443/4 Malwaththa Rd, Rajagiriya 11222</resume:degreeTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#company-mvv -->
+
+    <owl:NamedIndividual rdf:about="&resume;company-mvv">
+        <rdf:type rdf:resource="&resume;Company"/>
+        <resume:Name>MVV Information Technology</resume:Name>
+        <resume:Locality>SWEDEN</resume:Locality>
+        <resume:orgAddress>WTC East Tower, Level 9, Colombo 00001</resume:orgAddress>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#course-androod -->
+
+    <owl:NamedIndividual rdf:about="&resume;course-androod">
+        <rdf:type rdf:resource="&resume;Course"/>
+        <resume:courseStartDate rdf:datatype="&rdfs;Literal">2016-10-7</resume:courseStartDate>
+        <resume:courseFinishDate rdf:datatype="&rdfs;Literal">2017-01-9</resume:courseFinishDate>
+        <resume:courseTitle rdf:datatype="&rdfs;Literal">Android app development</resume:courseTitle>
+        <resume:offeredBy rdf:resource="&resume;eduins-sliit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#course-ccna -->
+
+    <owl:NamedIndividual rdf:about="&resume;course-ccna">
+        <resume:courseStartDate>2017-01-23</resume:courseStartDate>
+        <resume:courseFinishDate>2017-09-13</resume:courseFinishDate>
+        <resume:courceDescription>CCNA level 1 and 2</resume:courceDescription>
+        <resume:courseTitle>Cisco Certified Network Associate</resume:courseTitle>
+        <resume:offeredBy rdf:resource="&resume;eduins-sliit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#course-javaee -->
+
+    <owl:NamedIndividual rdf:about="&resume;course-javaee">
+        <resume:courceDescription>Java EE, Sprting , Hibernate and Front end technologies</resume:courceDescription>
+        <resume:courseTitle>Advanced Business Solutoion Developer</resume:courseTitle>
+        <resume:courseStartDate>2016-12-08</resume:courseStartDate>
+        <resume:courseStartDate>2016-05-03</resume:courseStartDate>
+        <resume:offeredBy rdf:resource="&resume;eduins-ijse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#course-ocpjp -->
+
+    <owl:NamedIndividual rdf:about="&resume;course-ocpjp">
+        <rdf:type rdf:resource="&resume;Course"/>
+        <resume:courseStartDate rdf:datatype="&rdfs;Literal">2016-02-11</resume:courseStartDate>
+        <resume:courseFinishDate rdf:datatype="&rdfs;Literal">2016-08-11</resume:courseFinishDate>
+        <resume:courseTitle rdf:datatype="&rdfs;Literal">OCPJS</resume:courseTitle>
+        <resume:offeredBy rdf:resource="&resume;eduins-ijse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#course-systemadmin -->
+
+    <owl:NamedIndividual rdf:about="&resume;course-systemadmin">
+        <resume:courceDescription>Linux System Administration course</resume:courceDescription>
+        <resume:courseTitle>Linuz system admin</resume:courseTitle>
+        <resume:offeredBy rdf:resource="&resume;eduins-sliit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#degree-se -->
+
+    <owl:NamedIndividual rdf:about="&resume;degree-se">
+        <rdf:type rdf:resource="&resume;Degree"/>
+        <resume:degreeTitle>B.Sc in Software Enginering</resume:degreeTitle>
+        <resume:offeredBy rdf:resource="&resume;uni-uok"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#eduins-ijse -->
+
+    <owl:NamedIndividual rdf:about="&resume;eduins-ijse">
+        <resume:orgAddress>223A 1/2, Colombo - Galle Main Road, Panadura</resume:orgAddress>
+        <resume:Name>IJSE</resume:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#eduins-sliit -->
+
+    <owl:NamedIndividual rdf:about="&resume;eduins-sliit">
+        <resume:Name>Sri Lanka Institute of Information Technology</resume:Name>
+        <resume:orgAddress>Level #16, BOC Merchant Tower, St Michaels Rd, Colombo</resume:orgAddress>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#langskill-english -->
+
+    <owl:NamedIndividual rdf:about="&resume;langskill-english">
+        <rdf:type rdf:resource="&resume;LanguageSkill"/>
+        <resume:lngSkillLevelReading rdf:datatype="&rdfs;Literal">4.5</resume:lngSkillLevelReading>
+        <resume:lngSkillLevelReading rdf:datatype="&rdfs;Literal">5</resume:lngSkillLevelReading>
+        <resume:skillName rdf:datatype="&rdfs;Literal">English</resume:skillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#langskill-sinhala -->
+
+    <owl:NamedIndividual rdf:about="&resume;langskill-sinhala">
+        <rdf:type rdf:resource="&resume;LanguageSkill"/>
+        <resume:lngSkillLevelWritten rdf:datatype="&rdfs;Literal">5</resume:lngSkillLevelWritten>
+        <resume:lngSkillLevelReading rdf:datatype="&rdfs;Literal">5</resume:lngSkillLevelReading>
+        <resume:skillName rdf:datatype="&rdfs;Literal">Sinhala</resume:skillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#org-ieee -->
+
+    <owl:NamedIndividual rdf:about="&resume;org-ieee">
+        <rdf:type rdf:resource="&resume;VolunteerOrg"/>
+        <resume:Name>IEEE Student Branch University of Kelaniya</resume:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#person-tharuka -->
+
+    <owl:NamedIndividual rdf:about="&resume;person-tharuka">
+        <rdf:type rdf:resource="&resume;Person"/>
+        <resume:birthPlace rdf:datatype="&rdfs;Literal">Kalutara</resume:birthPlace>
+        <resume:personName rdf:datatype="&rdfs;Literal">Tharuka Vishwajith Sarathchandra</resume:personName>
+        <resume:address rdf:datatype="&rdfs;Literal">Vishwa, Galwalawatta Road, Bombuwala</resume:address>
+        <resume:hasNationallity>Sri Lankan</resume:hasNationallity>
+        <resume:followedCourse rdf:resource="&resume;course-androod"/>
+        <resume:followedCourse rdf:resource="&resume;course-ccna"/>
+        <resume:followedCourse rdf:resource="&resume;course-javaee"/>
+        <resume:followedCourse rdf:resource="&resume;course-ocpjp"/>
+        <resume:followedCourse rdf:resource="&resume;course-systemadmin"/>
+        <resume:readingFor rdf:resource="&resume;degree-se"/>
+        <resume:studiedAt rdf:resource="&resume;eduins-ijse"/>
+        <resume:studiedAt rdf:resource="&resume;eduins-sliit"/>
+        <resume:hasSkill rdf:resource="&resume;langskill-english"/>
+        <resume:hasSkill rdf:resource="&resume;langskill-sinhala"/>
+        <resume:wasMember rdf:resource="&resume;org-ieee"/>
+        <resume:studiedAt rdf:resource="&resume;school-kvns"/>
+        <resume:hasSkill rdf:resource="&resume;softskill-commiunication"/>
+        <resume:hasSkill rdf:resource="&resume;softskill-flexibility"/>
+        <resume:hasSkill rdf:resource="&resume;softskill-leadership"/>
+        <resume:hasSkill rdf:resource="&resume;softskill-problemSolvingSkills"/>
+        <resume:hasSkill rdf:resource="&resume;softskill-teamwork"/>
+        <resume:wasMember rdf:resource="&resume;sport-taekwondo"/>
+        <resume:hasSkill rdf:resource="&resume;techskill-java"/>
+        <resume:hasSkill rdf:resource="&resume;techskill-js"/>
+        <resume:hasSkill rdf:resource="&resume;techskill-node"/>
+        <resume:hasSkill rdf:resource="&resume;techskill-spring"/>
+        <resume:hasSkill rdf:resource="&resume;techskill-sql"/>
+        <resume:studying rdf:resource="&resume;uni-uok"/>
+        <resume:has rdf:resource="&resume;wh-entrust"/>
+        <resume:has rdf:resource="&resume;wh-mvv1"/>
+        <resume:has rdf:resource="&resume;wh-mvv2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#school-kvns -->
+
+    <owl:NamedIndividual rdf:about="&resume;school-kvns">
+        <resume:Name rdf:datatype="&rdfs;Literal">Kalutara Vidyalaya National School</resume:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#softskill-commiunication -->
+
+    <owl:NamedIndividual rdf:about="&resume;softskill-commiunication">
+        <resume:skillLevel rdf:datatype="&xsd;decimal">4.5</resume:skillLevel>
+        <resume:skillName>Commiunication Skill</resume:skillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#softskill-flexibility -->
+
+    <owl:NamedIndividual rdf:about="&resume;softskill-flexibility">
+        <resume:skillLevel rdf:datatype="&xsd;integer">5</resume:skillLevel>
+        <resume:skillName>Flexibility</resume:skillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#softskill-leadership -->
+
+    <owl:NamedIndividual rdf:about="&resume;softskill-leadership">
+        <resume:skillLevel rdf:datatype="&xsd;decimal">4.6</resume:skillLevel>
+        <resume:skillName>Leadership Skill</resume:skillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#softskill-problemSolvingSkills -->
+
+    <owl:NamedIndividual rdf:about="&resume;softskill-problemSolvingSkills">
+        <resume:skillLevel rdf:datatype="&xsd;decimal">4.5</resume:skillLevel>
+        <resume:skillName>Problem Solving Skills</resume:skillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#softskill-teamwork -->
+
+    <owl:NamedIndividual rdf:about="&resume;softskill-teamwork">
+        <resume:skillLevel rdf:datatype="&xsd;integer">5</resume:skillLevel>
+        <resume:skillName>Teamwork</resume:skillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#sport-taekwondo -->
+
+    <owl:NamedIndividual rdf:about="&resume;sport-taekwondo">
+        <resume:sportName>Taekwondo</resume:sportName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#techskill-java -->
+
+    <owl:NamedIndividual rdf:about="&resume;techskill-java">
+        <rdf:type rdf:resource="&resume;TechSkill"/>
+        <resume:skillYearsExperience rdf:datatype="&rdfs;Literal">4</resume:skillYearsExperience>
+        <resume:skillLevel rdf:datatype="&rdfs;Literal">4</resume:skillLevel>
+        <resume:skillName rdf:datatype="&rdfs;Literal">Java</resume:skillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#techskill-js -->
+
+    <owl:NamedIndividual rdf:about="&resume;techskill-js">
+        <resume:skillYearsExperience rdf:datatype="&xsd;integer">2</resume:skillYearsExperience>
+        <resume:skillLevel rdf:datatype="&xsd;integer">4</resume:skillLevel>
+        <resume:skillName>Java Script</resume:skillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#techskill-node -->
+
+    <owl:NamedIndividual rdf:about="&resume;techskill-node">
+        <resume:skillYearsExperience rdf:datatype="&xsd;integer">1</resume:skillYearsExperience>
+        <resume:skillLevel rdf:datatype="&xsd;integer">4</resume:skillLevel>
+        <resume:skillName>Node JS</resume:skillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#techskill-spring -->
+
+    <owl:NamedIndividual rdf:about="&resume;techskill-spring">
+        <rdf:type rdf:resource="&resume;TechSkill"/>
+        <resume:skillYearsExperience rdf:datatype="&xsd;integer">3</resume:skillYearsExperience>
+        <resume:skillLevel rdf:datatype="&xsd;decimal">4.5</resume:skillLevel>
+        <resume:skillName>Spring and Spring boot</resume:skillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#techskill-sql -->
+
+    <owl:NamedIndividual rdf:about="&resume;techskill-sql">
+        <resume:skillLevel rdf:datatype="&xsd;decimal">4.5</resume:skillLevel>
+        <resume:skillName>SQL, Mysql, PGSQL</resume:skillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#uni-uok -->
+
+    <owl:NamedIndividual rdf:about="&resume;uni-uok">
+        <rdf:type rdf:resource="&resume;University"/>
+        <resume:orgAddress>Dalugama, Kelaniya, Sri Lanka</resume:orgAddress>
+        <resume:Name>University of Kelaniya</resume:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#wh-entrust -->
+
+    <owl:NamedIndividual rdf:about="&resume;wh-entrust">
+        <rdf:type rdf:resource="&resume;WorkHistory"/>
+        <resume:jobTitle>Trainee Software Engineer</resume:jobTitle>
+        <resume:jobDescription>Trainee Software Engineer</resume:jobDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#wh-mvv1 -->
+
+    <owl:NamedIndividual rdf:about="&resume;wh-mvv1">
+        <rdf:type rdf:resource="&resume;WorkHistory"/>
+        <resume:jobDescription>Assosiate Software Engineer</resume:jobDescription>
+        <resume:jobTitle>Assosiate Software Engineer</resume:jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://tharukavishwajith.github.io/resume.owl#wh-mvv2 -->
+
+    <owl:NamedIndividual rdf:about="&resume;wh-mvv2">
+        <resume:jobDescription>Software Engineer</resume:jobDescription>
+        <resume:jobTitle>Software Enginner</resume:jobTitle>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
