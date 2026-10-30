@@ -30,9 +30,10 @@
   "name": {{ site.author.name | jsonify }},
   "url": {{ '/' | absolute_url | jsonify }},
   "image": {{ '/images/profile.jpg' | absolute_url | jsonify }},
-  "jobTitle": "Machine Learning Engineer",
+  "jobTitle": "Senior Lead AI Engineer",
+  "worksFor": {"@type": "Organization", "name": "Virtusa"},
   "description": {{ site.description | strip | jsonify }},
-  "knowsAbout": ["Machine learning", "Natural language processing", "Generative AI", "Model fine-tuning", "Data engineering", "Software engineering"],
+  "knowsAbout": ["Machine learning", "Natural language processing", "Generative AI", "Agentic AI", "Knowledge graphs", "Ontology", "Context engineering", "Model fine-tuning", "Data engineering", "Software engineering"],
   "alumniOf": "University of Kelaniya",
   "sameAs": {{ site.social.links | jsonify }}
 }

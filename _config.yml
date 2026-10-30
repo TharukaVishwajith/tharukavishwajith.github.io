@@ -1,8 +1,8 @@
 # Site-wide settings for tharuka.xyz (built by GitHub Pages with Jekyll).
 title: Tharuka Sarathchandra
 description: >-
-  Machine Learning Engineer working across machine learning, NLP, generative AI and data engineering.
-  Trains, fine-tunes and deploys AI systems; former lecturer and creator of Wizard LK.
+  Senior Lead AI Engineer at Virtusa's AI Lab, working across machine learning, NLP, generative and agentic AI,
+  knowledge graphs and data engineering. Trains, fine-tunes and deploys AI systems; former lecturer and creator of Wizard LK.
 url: "https://tharuka.xyz"
 baseurl: ""
 lang: en
@@ -69,7 +69,7 @@ defaults:
         path: /images/og/default.jpg
         width: 1200
         height: 630
-        alt: Tharuka Sarathchandra, Machine Learning Engineer
+        alt: Tharuka Sarathchandra, Senior Lead AI Engineer
   - scope:
       path: ""
       type: articles

@@ -1,4 +1,16 @@
 # Work history shown on the home page, newest first.
+- role: Senior Lead AI Engineer, AI Lab
+  company: Virtusa
+  location: Colombo, Sri Lanka
+  dates: Aug 2026 – Present
+  summary: Leading applied AI work in the AI Lab, from knowledge-driven agentic systems on the Google ecosystem to compliance-first AI for regulated industries.
+  highlights:
+    - "Knowledge and context platform: designing ontologies, knowledge graphs and context graphs that give agentic AI systems structured, reliable context, built with Google ADK and the wider Google Cloud AI ecosystem."
+    - Applying context engineering so agents retrieve, combine and reason over the right enterprise knowledge for each task.
+    - "Confidential project in the health and insurance domain: leading an AI-driven data conversion programme for complex, highly regulated insurance data, where compliance shapes every design decision."
+    - Building agentic AI workflows and ETL pipelines for the conversion, and fine-tuning models on Google Cloud for domain-specific accuracy.
+  stack: [Ontology, Knowledge graphs, Context graphs, Context engineering, Google ADK, Google Cloud, Vertex AI, Agentic AI, Model fine-tuning, ETL pipelines, Python]
+
 - role: Machine Learning Engineer
   company: Rozie Labs (Rozie AI Inc.)
   location: Colombo, Sri Lanka

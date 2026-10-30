@@ -1,7 +1,9 @@
 - group: Machine learning & NLP
   items: [Classification, Clustering, Unsupervised learning, Model training, Fine-tuning, NLP, Named entity recognition, Intent classification, PII redaction, TensorFlow]
-- group: Generative AI
-  items: [LLMs, LLM fine-tuning, Multimodal models, Agentic AI, Google ADK, RAG, LangChain, LangGraph, Pydantic AI]
+- group: Generative & agentic AI
+  items: [LLMs, LLM fine-tuning, Multimodal models, Agentic AI, Agentic workflows, Context engineering, Google ADK, Vertex AI, RAG, LangChain, LangGraph, Pydantic AI]
+- group: Knowledge engineering
+  items: [Ontology design, Knowledge graphs, Context graphs, Semantic modelling, OWL, RDF]
 - group: Computer vision
   items: [YOLO, Object detection, OpenCV, Amazon Rekognition]
 - group: Data engineering
@@ -13,4 +15,4 @@
 - group: Blockchain & dApps
   items: [Blockchain, dApps, Ethereum, Solidity, Smart contracts, Whisper, Web3]
 - group: Cloud & DevOps
-  items: [AWS, Azure, Docker, CloudFormation, GitHub Actions, CI/CD]
+  items: [Google Cloud, AWS, Azure, Docker, CloudFormation, GitHub Actions, CI/CD]
