@@ -6,6 +6,7 @@ import unittest
 import re
 from html.parser import HTMLParser
 from pathlib import Path
+from urllib.parse import parse_qs, urlsplit
 
 SITE = Path("_site")
 SLUGS = ["meat-proxy", "disposable-software", "ai-harness-engineering", "doom-loop", "review-tax"]
@@ -27,6 +28,15 @@ class Page(HTMLParser):
 
 
 class BilingualPages(unittest.TestCase):
+    def test_stylesheet_urls_expire_with_each_build(self):
+        for url in ["/", "/learn/", "/learn/series/ai-native-development/", "/learn/en/ai-native-development/doom-loop/"]:
+            with self.subTest(url=url):
+                styles = Page(url).attrs("link", rel="stylesheet")
+                local = [urlsplit(s["href"]) for s in styles if s["href"].startswith("/assets/css/")]
+                self.assertTrue(local)
+                for style in local:
+                    self.assertTrue(parse_qs(style.query).get("v"), f"{url}: {style.path} can reuse stale CSS")
+
     def test_all_five_articles_have_reciprocal_language_links(self):
         for slug in SLUGS:
             for lang, prefix, other_lang, other_prefix in [("si", "/learn/", "en", "/learn/en/"), ("en", "/learn/en/", "si", "/learn/")]:
