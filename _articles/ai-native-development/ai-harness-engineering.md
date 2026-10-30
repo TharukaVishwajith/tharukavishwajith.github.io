@@ -8,6 +8,12 @@ series: ai-native-development
 part: 3
 cover: /images/learn/ai-harness.jpg
 cover_alt: "Cover: AI Harness Engineering, with an agent loop of Plan, Act, Observe, Evaluate, Repeat and Tools"
+image:
+  path: /images/og/ai-harness.jpg
+  width: 1200
+  height: 630
+  alt: "Cover: AI Harness Engineering, with an agent loop of Plan, Act, Observe, Evaluate, Repeat and Tools"
+locale: si_LK
 tags: [AIHarness, HarnessEngineering, AgenticAI, SoftwareEngineering]
 ---
 

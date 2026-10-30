@@ -6,9 +6,17 @@ description: >-
 url: "https://tharuka.xyz"
 baseurl: ""
 lang: en
+locale: en_US
 author:
   name: Tharuka Sarathchandra
   email: hello@tharuka.xyz
+  url: "https://tharuka.xyz/"
+  twitter: TharukaVS
+twitter:
+  username: TharukaVS
+  card: summary_large_image
+# Used as the publisher logo in article structured data.
+logo: /images/apple-touch-icon.png
 social:
   name: Tharuka Sarathchandra
   links:
@@ -38,6 +46,7 @@ kramdown:
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
+  - jekyll-sitemap
 
 feed:
   collections:
@@ -49,16 +58,37 @@ collections:
     output: true
     permalink: /learn/:path/
 
+# `image` is the link-preview picture (WhatsApp, LinkedIn, X...): 1200x630, under 300 KB.
+# Pages can override it in their front matter; articles use their own cover's
+# preview, made with tools/make_og_covers.py.
 defaults:
+  - scope:
+      path: ""
+    values:
+      image:
+        path: /images/og/default.jpg
+        width: 1200
+        height: 630
+        alt: Tharuka Sarathchandra, Machine Learning Engineer
   - scope:
       path: ""
       type: articles
     values:
       layout: article
+      image:
+        path: /images/og/wizard-lab.jpg
+        width: 1200
+        height: 630
+        alt: Wizard Lab by Tharuka Sarathchandra
   - scope:
       path: "learn"
     values:
       layout: learn
+      image:
+        path: /images/og/wizard-lab.jpg
+        width: 1200
+        height: 630
+        alt: Wizard Lab by Tharuka Sarathchandra
 
 exclude:
   - docs/
@@ -67,3 +97,4 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor/
+  - tools/
