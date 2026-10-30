@@ -18,7 +18,27 @@
 <link rel="stylesheet" href="{{ '/assets/css/base.css' | relative_url }}">
 {% for sheet in include.css %}<link rel="stylesheet" href="{{ sheet | relative_url }}">
 {% endfor %}
+{% if page.url == "/" %}
+<title>{{ page.title }}</title>
+{% seo title=false %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "{{ '/#person' | absolute_url }}",
+  "name": {{ site.author.name | jsonify }},
+  "url": {{ '/' | absolute_url | jsonify }},
+  "image": {{ '/images/profile.jpg' | absolute_url | jsonify }},
+  "jobTitle": "Machine Learning Engineer",
+  "description": {{ site.description | strip | jsonify }},
+  "knowsAbout": ["Machine learning", "Natural language processing", "Generative AI", "Model fine-tuning", "Data engineering", "Software engineering"],
+  "alumniOf": "University of Kelaniya",
+  "sameAs": {{ site.social.links | jsonify }}
+}
+</script>
+{% else %}
 {% seo %}
+{% endif %}
 {% if site.google_analytics != "" %}
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
 <script>

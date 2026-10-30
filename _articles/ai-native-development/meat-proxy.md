@@ -7,6 +7,12 @@ series: ai-native-development
 part: 1
 cover: /images/learn/meat-proxy.jpg
 cover_alt: A developer thinking at his desk next to an AI assistant, with a sticky note that says "Don't be a Meat Proxy!"
+image:
+  path: /images/og/meat-proxy.jpg
+  width: 1200
+  height: 630
+  alt: A developer thinking at his desk next to an AI assistant, with a sticky note that says "Don't be a Meat Proxy!"
+locale: si_LK
 tags: [ai, critical-thinking, deep-work]
 ---
 

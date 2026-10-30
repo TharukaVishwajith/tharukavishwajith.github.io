@@ -12,6 +12,8 @@ Built with Jekyll and served by GitHub Pages; there's no server and no build ste
 | `_data/series.yml` | The list of series. |
 | `assets/` | CSS and JS (no frameworks). |
 | `docs/` | How to write articles and set up `learn.tharuka.xyz`. Not published. |
+| `tools/` | `make_og_covers.py` turns an article cover into a 1200x630 link-preview image. Not published. |
+| `images/og/` | Link-preview images (Open Graph) for WhatsApp, LinkedIn, X and search. |
 
 - To add an article, see [docs/writing-articles.md](docs/writing-articles.md).
 - To put the hub on a subdomain, see [docs/subdomain-setup.md](docs/subdomain-setup.md).

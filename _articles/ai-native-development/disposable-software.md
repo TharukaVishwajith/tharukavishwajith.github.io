@@ -8,6 +8,12 @@ series: ai-native-development
 part: 2
 cover: /images/learn/disposable-software.jpg
 cover_alt: A developer smiling at his laptop beside a bin of crumpled paper, under the Sinhala caption "ඉවත දැමිය හැකි මෘදුකාංග"
+image:
+  path: /images/og/disposable-software.jpg
+  width: 1200
+  height: 630
+  alt: A developer smiling at his laptop beside a bin of crumpled paper, under the Sinhala caption "ඉවත දැමිය හැකි මෘදුකාංග"
+locale: si_LK
 tags: [DisposableSoftware, ArtificialIntelligence, SoftwareEngineering, CodeQuality]
 ---
 

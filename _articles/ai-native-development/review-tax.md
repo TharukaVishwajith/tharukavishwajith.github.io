@@ -8,6 +8,12 @@ series: ai-native-development
 part: 5
 cover: /images/learn/review-tax.jpg
 cover_alt: "Cover: Code Review and Review Tax in the Agentic AI era"
+image:
+  path: /images/og/review-tax.jpg
+  width: 1200
+  height: 630
+  alt: "Cover: Code Review and Review Tax in the Agentic AI era"
+locale: si_LK
 tags: [AgenticAI, CodeReview, ReviewTax, SoftwareEngineering]
 ---
 

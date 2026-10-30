@@ -8,6 +8,12 @@ series: ai-native-development
 part: 4
 cover: /images/learn/doom-loop.jpg
 cover_alt: "Cover: AI Coding Agents and the Doom Loop"
+image:
+  path: /images/og/doom-loop.jpg
+  width: 1200
+  height: 630
+  alt: "Cover: AI Coding Agents and the Doom Loop"
+locale: si_LK
 tags: [ContextEngineering, AIAgents, DoomLoop, SoftwareEngineering]
 ---
 
