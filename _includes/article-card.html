@@ -1,5 +1,5 @@
 {%- assign s = site.data.series | where: "id", include.article.series | first -%}
-<a class="article-card" href="{{ include.article.url | relative_url }}" style="--series: {{ s.color | default: '#6366f1' }}">
+<a class="article-card" href="{{ include.article.url | relative_url }}" style="--series: {{ s.color | default: '#f5a623' }}">
   <span class="article-card-series">{% if s %}{{ s.short }}{% if include.article.part %} · Part {{ include.article.part }}{% endif %}{% else %}Start here{% endif %}</span>
   <h3>{{ include.article.title }}</h3>
   {% if include.article.description %}<p class="muted">{{ include.article.description }}</p>{% endif %}

@@ -12,15 +12,15 @@
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 24px; }
 .portrait { position: relative; justify-self: center; }
 .portrait img {
-  width: min(360px, 76vw); height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 24px;
-  border: 1px solid var(--border);
+  width: min(400px, 80vw); height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 24px;
+  background: var(--brand);
 }
 .portrait-badge {
   position: absolute; left: 50%; bottom: -18px; transform: translateX(-50%); white-space: nowrap;
   background: var(--bg-elev); border: 1px solid var(--border); border-radius: 999px; padding: 8px 14px;
   font-size: 0.85rem; font-weight: 500; box-shadow: var(--shadow); display: flex; align-items: center; gap: 8px;
 }
-.dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.18); }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--yellow); box-shadow: 0 0 0 4px rgba(255, 210, 63, 0.3); }
 
 .stats {
   margin: 64px 0 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
@@ -43,7 +43,7 @@
 .timeline-item { display: grid; grid-template-columns: 180px 1fr; gap: 36px; padding-bottom: 24px; position: relative; }
 .timeline-item::before {
   content: ""; position: absolute; left: 175px; top: 26px; width: 12px; height: 12px; border-radius: 50%;
-  background: var(--bg); border: 2px solid var(--accent);
+  background: var(--bg); border: 2px solid var(--brand);
 }
 .timeline-meta { display: flex; flex-direction: column; padding-top: 20px; font-size: 0.88rem; }
 .timeline-dates { font-weight: 600; }
@@ -51,7 +51,7 @@
 .company { color: var(--accent); font-weight: 600; margin-bottom: 8px; }
 .highlights { margin: 0 0 16px; padding-left: 18px; }
 .highlights li { margin-bottom: 6px; }
-.highlights li::marker { color: var(--accent); }
+.highlights li::marker { color: var(--brand); }
 
 /* Projects */
 .project-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; }
@@ -62,7 +62,7 @@
 .project-client { font-size: 0.85rem; font-weight: 600; color: var(--accent-2); margin-bottom: 8px !important; }
 .project-tag {
   align-self: flex-start; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em;
-  padding: 4px 9px; border-radius: 6px; background: var(--accent-soft); color: var(--accent);
+  padding: 4px 9px; border-radius: 6px; background: var(--accent-soft); color: var(--text);
 }
 
 /* Skills + education */
@@ -73,7 +73,7 @@
 .edu { margin-top: 12px; padding: 20px 22px; }
 .edu h3 { font-size: 1.05rem; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .edu p { margin: 0 0 4px; }
-.badge { font-family: var(--font); font-size: 0.7rem; padding: 3px 8px; border-radius: 6px; background: var(--accent-soft); color: var(--accent); letter-spacing: 0.02em; }
+.badge { font-family: var(--font); font-size: 0.7rem; padding: 3px 8px; border-radius: 6px; background: var(--brand); color: var(--brand-ink); letter-spacing: 0.02em; }
 .plain { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; font-size: 0.93rem; }
 
 /* Community */
@@ -95,10 +95,15 @@
 
 /* Learn CTA */
 .learn-cta {
-  display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; padding: 44px;
-  border-radius: 24px; border: 1px solid var(--border); background: var(--bg-soft);
+  display: grid; position: relative; overflow: hidden; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; padding: 44px;
+  border-radius: 24px; border: 0; background: var(--brand); color: var(--brand-ink);
 }
-.learn-cta p { color: var(--muted); font-size: 1.05rem; }
+.learn-cta p { color: rgba(17, 17, 17, 0.75); font-size: 1.05rem; }
+.learn-cta .eyebrow { color: var(--brand-ink); }
+.learn-cta .chip { background: rgba(255, 255, 255, 0.35); border-color: transparent; color: var(--brand-ink); }
+.learn-cta .latest-item { background: #fff; border-color: transparent; color: #111; }
+.learn-cta .latest-item .muted { color: #6b6259; }
+.learn-cta .btn-primary { background: #111; color: #fff; border-color: #111; }
 .learn-latest { display: grid; gap: 10px; }
 .latest-item {
   display: flex; justify-content: space-between; gap: 12px; padding: 14px 16px; border-radius: 12px;

@@ -15,7 +15,7 @@
   padding: 56px 0 36px; margin-bottom: 36px; border-bottom: 1px solid var(--border);
 }
 .page-hero h1 { font-size: clamp(2rem, 4.4vw, 3rem); margin: 12px 0 14px; }
-.page-hero .eyebrow { color: var(--series, var(--accent)); }
+.page-hero .eyebrow { color: var(--accent); }
 .crumb { display: block; width: fit-content; font-size: 0.9rem; color: var(--muted); margin-bottom: 18px; }
 
 /* Series cards */
@@ -29,8 +29,8 @@
 .series-card:hover { transform: translateY(-3px); border-color: var(--series); text-decoration: none; }
 .series-card h3 { font-size: 1.3rem; margin: 0; }
 .series-card p { margin: 0; font-size: 0.95rem; }
-.series-level { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--series); }
-.series-count { margin-top: auto; padding-top: 8px; font-weight: 600; font-size: 0.9rem; color: var(--series); }
+.series-level { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); }
+.series-count { margin-top: auto; padding-top: 8px; font-weight: 600; font-size: 0.9rem; color: var(--accent); }
 
 /* Article cards */
 .article-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; margin-top: 20px; }
@@ -42,7 +42,7 @@
 .article-card:hover { text-decoration: none; border-color: var(--series); }
 .article-card h3 { font-size: 1.12rem; margin: 0; }
 .article-card p { margin: 0; font-size: 0.93rem; }
-.article-card-series { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--series); }
+.article-card-series { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); }
 .article-card-meta { font-size: 0.82rem; color: var(--muted); }
 .filter {
   width: 100%; margin-top: 18px; padding: 14px 16px; font: inherit; color: var(--text);
@@ -61,7 +61,7 @@
 .series-list .muted { font-size: 0.92rem; }
 .series-num {
   flex: none; width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center;
-  font-weight: 700; color: #fff; background: var(--series);
+  font-weight: 700; color: var(--brand-ink); background: var(--brand);
 }
 .empty h2 { font-size: 1.3rem; }
 

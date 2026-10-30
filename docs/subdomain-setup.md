@@ -11,7 +11,7 @@ A GitHub Pages site gets exactly one custom domain per repository. This reposito
 **Phase 2: move to `learn.tharuka.xyz` when you're ready.** About 15 minutes of work:
 
 1. **Create the repository.** On GitHub, create a new public repository, e.g. `TharukaVishwajith/learn`. Leave it empty.
-2. **Move the hub into it.** Copy these from this repo: `_articles/`, `_data/series.yml`, `_includes/`, `_layouts/learn.html`, `_layouts/series.html`, `_layouts/article.html`, `assets/`, `learn/` (its contents become the site root), `images/me.jpg`, `images/favicon.ico`, `_config.yml`, `404.html`.
+2. **Move the hub into it.** Copy these from this repo: `_articles/`, `_data/series.yml`, `_includes/`, `_layouts/learn.html`, `_layouts/series.html`, `_layouts/article.html`, `assets/`, `learn/` (its contents become the site root), `images/profile.jpg`, `images/favicon.ico`, `_config.yml`, `404.html`.
    In the new repo's `_config.yml` set `url: "https://learn.tharuka.xyz"`, and change the article permalink from `/learn/:path/` to `/:path/` (and the `/learn/...` links in the layouts to `/...`).
    Claude can do this move for you once the empty repo exists.
 3. **Add a CNAME file** in the new repo containing exactly one line: `learn.tharuka.xyz`.
