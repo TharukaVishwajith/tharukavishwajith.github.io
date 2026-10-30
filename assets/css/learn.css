@@ -7,16 +7,12 @@
 
 .learn-hero {
   padding: 80px 0 48px; border-bottom: 1px solid var(--border);
-  background:
-    radial-gradient(ellipse at 10% 0%, rgba(6, 182, 212, 0.16), transparent 50%),
-    radial-gradient(ellipse at 90% 20%, rgba(168, 85, 247, 0.18), transparent 50%);
 }
 .learn-hero h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); max-width: 860px; margin: 14px 0 18px; }
 .learn-hero .lead { max-width: 680px; }
 
 .page-hero {
   padding: 56px 0 36px; margin-bottom: 36px; border-bottom: 1px solid var(--border);
-  background: radial-gradient(ellipse at 0% 0%, color-mix(in srgb, var(--series, #6366f1) 18%, transparent), transparent 55%);
 }
 .page-hero h1 { font-size: clamp(2rem, 4.4vw, 3rem); margin: 12px 0 14px; }
 .page-hero .eyebrow { color: var(--series, var(--accent)); }
@@ -115,26 +111,27 @@
 .prose div.highlighter-rouge { position: relative; margin: 1.5em 0; }
 .prose pre {
   margin: 0; padding: 18px 20px; overflow-x: auto; border-radius: 12px; line-height: 1.6;
-  background: #0d1220; color: #e2e8f0; border: 1px solid #1f2a3d; font-size: 0.9rem;
+  background: var(--bg-soft); color: var(--text); border: 1px solid var(--border); font-size: 0.9rem;
 }
 .copy-btn {
   position: absolute; top: 8px; right: 8px; font: 500 0.75rem var(--font); padding: 4px 10px; border-radius: 6px;
-  border: 1px solid #2c3850; background: #151c2c; color: #cbd5e1; cursor: pointer; opacity: 0; transition: opacity 0.15s ease;
+  border: 1px solid var(--border); background: var(--bg-elev); color: var(--muted); cursor: pointer; opacity: 0; transition: opacity 0.15s ease;
 }
 .prose div.highlighter-rouge:hover .copy-btn, .copy-btn:focus { opacity: 1; }
 
-/* Rouge syntax colours (one palette, code blocks are always dark) */
-.highlight .c, .highlight .c1, .highlight .cm, .highlight .cs, .highlight .sd { color: #7c8aa5; font-style: italic; }
-.highlight .k, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kc, .highlight .ow { color: #c792ea; }
-.highlight .kt, .highlight .nc, .highlight .nn { color: #ffcb6b; }
-.highlight .s, .highlight .s1, .highlight .s2, .highlight .sb, .highlight .sh, .highlight .si, .highlight .sa { color: #c3e88d; }
-.highlight .m, .highlight .mi, .highlight .mf, .highlight .mh { color: #f78c6c; }
-.highlight .nf, .highlight .fm, .highlight .nb, .highlight .bp { color: #82aaff; }
-.highlight .nd, .highlight .na, .highlight .nt { color: #89ddff; }
-.highlight .o, .highlight .p { color: #89ddff; }
-.highlight .err { color: #ff5370; }
-.highlight .gd { color: #ff5370; }
-.highlight .gi { color: #c3e88d; }
+/* Rouge syntax colours: light by default, dark under [data-theme="dark"] */
+.highlight { --c-com: #6e7781; --c-kw: #cf222e; --c-type: #953800; --c-str: #0a3069; --c-num: #0550ae; --c-fn: #8250df; --c-attr: #0550ae; --c-op: #24292f; }
+[data-theme="dark"] .highlight { --c-com: #8b949e; --c-kw: #ff7b72; --c-type: #ffa657; --c-str: #a5d6ff; --c-num: #79c0ff; --c-fn: #d2a8ff; --c-attr: #79c0ff; --c-op: #c9d1d9; }
+.highlight .c, .highlight .c1, .highlight .cm, .highlight .cs, .highlight .sd { color: var(--c-com); font-style: italic; }
+.highlight .k, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kc, .highlight .ow { color: var(--c-kw); }
+.highlight .kt, .highlight .nc, .highlight .nn { color: var(--c-type); }
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .sb, .highlight .sh, .highlight .si, .highlight .sa { color: var(--c-str); }
+.highlight .m, .highlight .mi, .highlight .mf, .highlight .mh { color: var(--c-num); }
+.highlight .nf, .highlight .fm, .highlight .nb, .highlight .bp { color: var(--c-fn); }
+.highlight .nd, .highlight .na, .highlight .nt { color: var(--c-attr); }
+.highlight .o, .highlight .p { color: var(--c-op); }
+.highlight .err, .highlight .gd { color: var(--c-kw); }
+.highlight .gi { color: #1a7f37; }
 
 @media (max-width: 1000px) {
   .article-layout { grid-template-columns: minmax(0, 1fr); }
