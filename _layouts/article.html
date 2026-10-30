@@ -22,7 +22,6 @@ layout: learn
         <img src="{{ '/images/profile.jpg' | relative_url }}" alt="" width="28" height="28">
         <span>Tharuka Sarathchandra · {{ page.date | date: "%b %-d, %Y" }} · {{ content | number_of_words | divided_by: 200 | plus: 1 }} {{ ui.min_read }}</span>
       </p>
-      {% include article-share.html %}
       {% if page.cover %}<img class="article-cover" src="{{ page.cover | relative_url }}" alt="{{ page.cover_alt | default: '' }}">{% endif %}
     </div>
   </header>
