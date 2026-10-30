@@ -18,7 +18,7 @@ AI Coding Agents භාවිතයෙන් අද අපිට ඉතා ව�
 
 AI-generated PRs වැඩි වෙනකොට ඒවා Review කරන්න, Validate කරන්න සහ නැවත නිවැරදි කරන්න වැඩි කාලයක් වැය වෙන්න පුළුවන්. අවසානයේ Code Generation වේගවත් වුණත් සමස්ත Development Process එක මන්දගාමී වෙන්න පුළුවන්.
 
-## hama PR එකකටම එකම අවධානය දෙන්න ඕනද?
+## හැම PR එකකටම එකම අවධානය දෙන්න ඕනද?
 
 නැහැ! මෙතැනදී වැදගත් සංකල්ප කිහිපයක් තියෙනවා.
 
@@ -35,7 +35,7 @@ PR එකකින් System එකේ කොපමණ කොටසකට බල
 
 AI Agent එක "Tests Pass" කියලා පැවසීම විතරක් ප්රමාණවත් නැහැ. Test Results, Screenshots සහ Before/After Behavior වගේ සැබෑ Evidence ලබාදීමත් වැදගත්.
 
-## Ehenam Review Process එක වෙනස් කරන්නේ කොහොමද?
+## එහෙනම් Review Process එක වෙනස් කරන්නේ කොහොමද?
 
 **Low Risk + Small Blast Radius + Easily Reversible** PRs සඳහා AI Code Review, Automated Tests සහ CI Checks භාවිත කරලා, සුදුසු ආරක්ෂක සීමාවන් යටතේ Human Review අඩු කරන්න හෝ Auto-Merge කරන්න පුළුවන්.
 
