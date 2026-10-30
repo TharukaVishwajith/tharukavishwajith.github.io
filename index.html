@@ -29,7 +29,7 @@ title: Tharuka Sarathchandra · AI & Data Engineer
       <div class="hero-dots" aria-hidden="true"></div>
       <div class="container hero-grid">
         <div>
-          <span class="eyebrow"><span class="eyebrow-dot"></span>Senior Software Engineer · Applied AI & Data</span>
+          <span class="eyebrow"><span class="eyebrow-dot"></span>Machine Learning Engineer · AI & Data</span>
           <h1>I build AI systems that turn <span class="grad-text">messy data into answers.</span></h1>
           <p class="lead">I'm Tharuka Sarathchandra. For more than eight years I've shipped software, from Spring Boot microservices and data pipelines to machine learning, NLP and generative AI systems that I've trained, fine-tuned and taken to production. I've also lectured at the University of Kelaniya and teach 20,000+ learners on Wizard LK.</p>
           <div class="hero-actions">
@@ -183,6 +183,17 @@ title: Tharuka Sarathchandra · AI & Data Engineer
               <li>DeepLearning.AI Data Engineering Professional Certificate <span class="muted">2024</span></li>
               <li>Machine Learning in Production <span class="muted">2023</span></li>
               <li>AWS Academy Educator <span class="muted">2022–2024</span></li>
+            </ul>
+          </article>
+          <article class="card edu">
+            <h3>Publications</h3>
+            <ul class="pubs">
+              {% for pub in site.data.publications %}
+              <li>
+                {% if pub.url %}<a href="{{ pub.url }}">{{ pub.title }}</a>{% else %}<span>{{ pub.title }}</span>{% endif %}
+                <span class="muted">{{ pub.venue }}{% if pub.year %} · {{ pub.year }}{% endif %}{% unless pub.url %} · link coming soon{% endunless %}</span>
+              </li>
+              {% endfor %}
             </ul>
           </article>
         </div>

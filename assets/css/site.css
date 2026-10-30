@@ -126,6 +126,10 @@ main { overflow-x: clip; }
 .edu h3 { font-size: 1.05rem; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .edu p { margin: 0 0 4px; }
 .badge { font-family: var(--font); font-size: 0.7rem; padding: 3px 8px; border-radius: 6px; background: var(--brand); color: var(--brand-ink); letter-spacing: 0.02em; }
+.pubs { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; font-size: 0.93rem; }
+.pubs li { display: grid; gap: 2px; }
+.pubs a { color: var(--text); font-weight: 600; text-decoration: underline; text-decoration-color: var(--brand); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.pubs span:first-child { font-weight: 600; }
 .plain { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; font-size: 0.93rem; }
 
 /* Community */
