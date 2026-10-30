@@ -1,0 +1,23 @@
+# Learning hub series. Each article's front matter sets `series:` to one of these ids.
+# To add a series: add an entry here and a page in learn/series/<id>.md (copy an existing one).
+- id: ai-engineering
+  title: AI Engineering, End to End
+  short: AI Engineering
+  level: Intermediate
+  color: "#f5a623"
+  description: The whole AI toolkit, not just chatbots. Classic machine learning, NLP model training, fine-tuning LLMs and multimodal models, retrieval, agents and evaluation, built the way they are built at work.
+  topics: [Machine learning, NLP, Fine-tuning, LLMs, Agents, Evaluation]
+- id: data-engineering
+  title: Data Engineering, Practically
+  short: Data Engineering
+  level: Beginner → Intermediate
+  color: "#ffd23f"
+  description: How data actually moves. ETL and ELT, connectors, warehouses, dbt, orchestration with Airflow and the pipelines that feed analytics and AI.
+  topics: [ETL & ELT, Airbyte, dbt, Airflow, Warehousing]
+- id: software-engineering
+  title: Software Engineering Foundations
+  short: Software Engineering
+  level: Beginner
+  color: "#111111"
+  description: The craft behind reliable systems. APIs, databases, architecture, testing and cloud deployment for people starting out or levelling up.
+  topics: [APIs, Databases, Architecture, Testing, Cloud]

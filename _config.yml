@@ -1,0 +1,69 @@
+# Site-wide settings for tharuka.xyz (built by GitHub Pages with Jekyll).
+title: Tharuka Sarathchandra
+description: >-
+  Senior Software Engineer working across machine learning, NLP, generative AI and data engineering.
+  Trains, fine-tunes and deploys AI systems; former lecturer and creator of Wizard LK.
+url: "https://tharuka.xyz"
+baseurl: ""
+lang: en
+author:
+  name: Tharuka Sarathchandra
+  email: tharukavishwajiths@gmail.com
+social:
+  name: Tharuka Sarathchandra
+  links:
+    - https://github.com/TharukaVishwajith
+    - https://www.linkedin.com/in/tharukav/
+    - https://www.youtube.com/wizardlk
+    - https://twitter.com/TharukaVS
+
+# The learning hub. Rename it here and it changes everywhere.
+# `url` is where the main site links to. Keep "/learn/" while the hub lives in
+# this repo; change it to "https://learn.tharuka.xyz/" once the subdomain is live
+# (see docs/subdomain-setup.md).
+learn:
+  name: Wizard Lab
+  tagline: Practical series on software engineering, AI and data, from someone who ships them.
+  url: /learn/
+
+# Optional: a GA4 measurement ID such as "G-XXXXXXXXXX". Leave empty to disable analytics.
+google_analytics: ""
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  hard_wrap: false
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+
+feed:
+  collections:
+    articles:
+      path: "/learn/feed.xml"
+
+collections:
+  articles:
+    output: true
+    permalink: /learn/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: articles
+    values:
+      layout: article
+  - scope:
+      path: "learn"
+    values:
+      layout: learn
+
+exclude:
+  - docs/
+  - README.md
+  - resume.owl
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
