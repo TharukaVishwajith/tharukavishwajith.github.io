@@ -1,0 +1,14 @@
+{%- if page.translation_key -%}
+  {%- if page.collection == 'articles' -%}
+    {%- assign translations = site.articles | where: 'translation_key', page.translation_key | sort: 'lang' -%}
+  {%- else -%}
+    {%- assign translations = site.pages | where: 'translation_key', page.translation_key | sort: 'lang' -%}
+  {%- endif -%}
+  {% if translations.size > 1 %}
+  <nav class="language-switch" aria-label="Language / භාෂාව">
+    {% for translation in translations %}
+    <a href="{{ translation.url | relative_url }}" lang="{{ translation.lang }}" hreflang="{{ translation.lang }}"{% if translation.url == page.url %} aria-current="page"{% endif %}>{% if translation.lang == 'si' %}සිංහල{% else %}English{% endif %}</a>
+    {% endfor %}
+  </nav>
+  {% endif %}
+{%- endif -%}

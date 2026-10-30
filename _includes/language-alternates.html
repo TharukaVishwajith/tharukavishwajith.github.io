@@ -1,0 +1,10 @@
+{%- if page.translation_key -%}
+  {%- if page.collection == 'articles' -%}
+    {%- assign alternatives = site.articles | where: 'translation_key', page.translation_key -%}
+  {%- else -%}
+    {%- assign alternatives = site.pages | where: 'translation_key', page.translation_key -%}
+  {%- endif -%}
+  {% for alternative in alternatives %}
+  <link rel="alternate" hreflang="{{ alternative.lang }}" href="{{ alternative.url | absolute_url }}">
+  {% endfor %}
+{%- endif -%}

@@ -1,23 +1,27 @@
+{%- assign language = page.lang | default: 'si' -%}
+{%- assign ui = site.data.learn_ui[language] -%}
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 <head>
   {% include head.html css="/assets/css/learn.css" %}
+  {% include language-alternates.html %}
   <link rel="alternate" type="application/atom+xml" title="{{ site.learn.name }}" href="{{ '/learn/feed.xml' | relative_url }}">
 </head>
 <body class="learn">
-  <a class="sr-only" href="#main">Skip to content</a>
+  <a class="sr-only" href="#main">{{ ui.skip }}</a>
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="{{ '/learn/' | relative_url }}"><span class="brand-mark">WL</span><span>{{ site.learn.name }}</span></a>
+      <a class="brand" href="{{ ui.home | relative_url }}"><span class="brand-mark">WL</span><span>{{ site.learn.name }}</span></a>
       <nav class="nav" aria-label="Learn">
-        <a href="{{ '/learn/#series' | relative_url }}">Series</a>
-        <a href="{{ '/learn/articles/' | relative_url }}"{% if page.url == '/learn/articles/' %} aria-current="page"{% endif %}>All articles</a>
-        <a href="https://www.youtube.com/wizardlk">Videos</a>
-        <a class="nav-cta" href="{{ '/' | relative_url }}">About Tharuka</a>
+        <a href="{{ ui.home | append: '#series' | relative_url }}">{{ ui.series }}</a>
+        <a href="{{ ui.articles_url | relative_url }}"{% if page.url == ui.articles_url %} aria-current="page"{% endif %}>{{ ui.all_articles }}</a>
+        <a href="https://www.youtube.com/wizardlk">{{ ui.videos }}</a>
+        <a class="nav-cta" href="{{ '/' | relative_url }}">{{ ui.about }}</a>
       </nav>
       {% include header-actions.html %}
     </div>
   </header>
+  <div class="container language-bar">{% include language-switch.html %}</div>
   <main id="main">
     {{ content }}
   </main>

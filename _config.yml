@@ -98,3 +98,4 @@ exclude:
   - Gemfile.lock
   - vendor/
   - tools/
+  - images/learn/ai-native-development-source.png

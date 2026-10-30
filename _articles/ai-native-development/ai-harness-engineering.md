@@ -4,6 +4,7 @@ description: "හොඳ AI Model එකක් තිබුණා කියලා
 lead: false
 date: 2026-10-30 11:00:00 +0530
 lang: si
+translation_key: ai-native-development-ai-harness-engineering
 series: ai-native-development
 part: 3
 cover: /images/learn/ai-harness.jpg

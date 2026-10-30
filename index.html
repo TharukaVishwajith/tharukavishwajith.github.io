@@ -257,7 +257,7 @@ title: Tharuka Sarathchandra · Machine Learning Engineer
             </ul>
           </div>
           <div class="learn-latest">
-            {% assign latest = site.articles | sort: "date" | reverse %}
+            {% assign latest = site.articles | where: 'lang', 'si' | sort: "date" | reverse %}
             {% for a in latest limit: 3 %}
             <a class="latest-item" href="{{ a.url | relative_url }}">
               <span>{{ a.title }}</span>
