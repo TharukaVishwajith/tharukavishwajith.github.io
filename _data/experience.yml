@@ -8,7 +8,8 @@
     - Trained and fine-tuned models across the AI stack: classification and clustering, NLP models for intent classification, named entity recognition and PII redaction, and LLM and multimodal fine-tuning.
     - Architected and led an agentic AI platform for business insight generation, with end-to-end ETL pipelines that let users ask questions in natural language and get domain-specific answers and visualizations.
     - Architected and led an enterprise RAG application combining LLMs with hybrid search and re-ranking for accurate, context-aware access to organizational knowledge.
-    - Led the architecture and research behind a scalable system analysing 30,000+ live contact-center conversations a day with ML and generative AI.
+    - Architected a conversation analytics platform processing around 50,000 contact-center conversations a day, combining agentic AI with classic ML clustering to surface patterns and trends.
+    - Built a custom AI analysis harness on top of that unstructured data, so business users ask questions directly and get comprehensive reports on what is happening and why, without waiting on an analytics team.
     - Designed the data connector framework and ingestion pipelines (Airbyte, LangChain, Unstructured), and optimized Elasticsearch and MongoDB retrieval.
     - Mentored junior engineers on engineering practice and on designing and deploying cloud AI solutions.
   stack: [Python, TensorFlow, Google ADK, LangChain, LangGraph, FastAPI, Falcon, Elasticsearch, MongoDB, Airbyte, AWS, Azure]

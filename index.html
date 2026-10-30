@@ -47,7 +47,7 @@ title: Tharuka Sarathchandra · AI & Data Engineer
       <div class="container">
         <dl class="stats">
           <div><dt>8+ yrs</dt><dd>shipping production software</dd></div>
-          <div><dt>30K+</dt><dd>conversations analysed daily by systems I led</dd></div>
+          <div><dt>50K+</dt><dd>contact-center conversations analysed daily on a platform I architected</dd></div>
           <div><dt>20K+</dt><dd>learners on Wizard LK</dd></div>
           <div><dt>M.Sc.</dt><dd>Big Data Analytics, Distinction</dd></div>
         </dl>
@@ -135,15 +135,16 @@ title: Tharuka Sarathchandra · AI & Data Engineer
         <div class="section-head reveal">
           <span class="eyebrow"><span class="num">03</span>Selected work</span>
           <h2>Projects I've architected</h2>
-          <p class="muted">Freelance and independent systems, from computer vision to generative AI.</p>
+          <p class="muted">Platforms and products I've designed, from AI analytics at scale to computer vision.</p>
         </div>
         <div class="project-grid">
           {% for p in site.data.projects %}
-          <article class="card project reveal">
-            <span class="project-tag">{{ p.tag }}</span>
+          <article class="card project reveal{% if p.featured %} project-featured{% endif %}">
+            <span class="project-tag">{% if p.featured %}Featured · {% endif %}{{ p.tag }}</span>
             <h3>{{ p.title }}</h3>
             <p class="project-client">{{ p.client }}</p>
             <p class="muted">{{ p.description }}</p>
+            {% if p.points %}<ul class="highlights">{% for pt in p.points %}<li>{{ pt }}</li>{% endfor %}</ul>{% endif %}
           </article>
           {% endfor %}
         </div>

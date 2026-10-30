@@ -103,6 +103,14 @@ main { overflow-x: clip; }
 .project:nth-child(4n+3) .project-tag { background: var(--text); color: var(--bg); }
 .project h3 { font-size: 1.08rem; margin-top: 12px; }
 .project p { margin: 0; font-size: 0.93rem; }
+.project-featured { grid-column: 1 / -1; background: var(--text); color: var(--bg); border-color: var(--text); padding: 32px; }
+.project-featured h3 { font-size: 1.5rem; }
+.project-featured .muted { color: color-mix(in srgb, var(--bg) 72%, transparent); font-size: 1rem; max-width: 760px; }
+.project-featured .project-tag { background: var(--brand); color: var(--brand-ink); }
+.project-featured .project-client { color: var(--brand); }
+.project-featured .highlights { margin: 14px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px 28px; padding-left: 18px; font-size: 0.93rem; }
+.project-featured:hover { box-shadow: 6px 6px 0 var(--brand); }
+@media (max-width: 860px) { .project-featured .highlights { grid-template-columns: 1fr; } }
 .project-client { font-size: 0.85rem; font-weight: 600; color: var(--accent-2); margin-bottom: 8px !important; }
 .project-tag {
   align-self: flex-start; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em;
