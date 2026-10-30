@@ -1,0 +1,74 @@
+en:
+  home: /learn/en/
+  articles_url: /learn/en/articles/
+  series_prefix: /learn/en/series/
+  series: Series
+  all_articles: All articles
+  videos: Videos
+  about: About Tharuka
+  skip: Skip to content
+  by: by
+  hero_before: Learn to build
+  hero_emphasis: real
+  hero_after: software, AI and data systems.
+  intro: "Practical series on software engineering, AI and data. Written by an engineer who has trained, fine-tuned and shipped AI systems, taught at university, and explained it all to 20,000+ learners on Wizard LK."
+  browse: Browse series
+  series_intro: Each series is a path you can follow from part one, or dip into when you need it.
+  latest: Latest
+  parts: parts
+  part: Part
+  of: of
+  article: article
+  articles: articles
+  soon: Coming soon
+  all_series: All series
+  library: Library
+  filter_label: Filter articles
+  filter_placeholder: Filter by title, series or tag…
+  no_results: No articles match that filter.
+  empty_title: First lessons are on the way
+  empty_before: This series is being written. Follow the
+  empty_after: to catch the first part.
+  or: or
+  toc: On this page
+  previous: Previous
+  next: Next
+  min_read: min read
+  navigation: Series navigation
+si:
+  home: /learn/
+  articles_url: /learn/articles/
+  series_prefix: /learn/series/
+  series: ලිපි මාලා
+  all_articles: සියලු ලිපි
+  videos: වීඩියෝ
+  about: තාරුක ගැන
+  skip: අන්තර්ගතයට යන්න
+  by: විසින්
+  hero_before: සැබෑ ලෝකයට අවශ්‍ය
+  hero_emphasis: Software, AI සහ Data Systems
+  hero_after: හදන්න ඉගෙන ගනිමු.
+  intro: "Software Engineering, AI සහ Data ගැන ප්‍රායෝගික ලිපි මාලා. AI පද්ධති පුහුණු කර, වැඩිදියුණු කර, භාවිතයට ගෙන ආ, විශ්වවිද්‍යාලයේ ඉගැන්වූ සහ Wizard LK හරහා 20,000කට අධික පිරිසකට දැනුම බෙදා දුන් ඉංජිනේරුවෙකුගෙන්."
+  browse: ලිපි මාලා බලන්න
+  series_intro: පළමු කොටසේ සිට පිළිවෙළට කියවන්න, නැත්නම් අවශ්‍ය මාතෘකාව තෝරාගන්න.
+  latest: නවතම ලිපි
+  parts: කොටස්
+  part: කොටස
+  of: /
+  article: ලිපියක්
+  articles: ලිපි
+  soon: ළඟදීම
+  all_series: සියලු ලිපි මාලා
+  library: ලිපි එකතුව
+  filter_label: ලිපි සොයන්න
+  filter_placeholder: මාතෘකාව, ලිපි මාලාව හෝ ටැග් අනුව සොයන්න…
+  no_results: ඔබේ සෙවුමට ගැළපෙන ලිපි නැහැ.
+  empty_title: පළමු ලිපි ළඟදීම
+  empty_before: මෙම ලිපි මාලාව ලියමින් පවතිනවා. පළමු කොටස දැනගැනීමට
+  empty_after: අනුගමනය කරන්න.
+  or: හෝ
+  toc: මෙම ලිපියේ
+  previous: පෙර ලිපිය
+  next: ඊළඟ ලිපිය
+  min_read: මිනිත්තු කියවීමක්
+  navigation: ලිපි මාලාවේ මඟපෙන්වීම

@@ -2,14 +2,18 @@
 layout: learn
 ---
 {%- assign s = site.data.series | where: "id", page.series_id | first -%}
-{%- assign items = site.articles | where: "series", page.series_id | sort: "part" -%}
+{%- assign language = page.lang | default: 'si' -%}
+{%- assign ui = site.data.learn_ui[language] -%}
+{%- assign localized = s.translations[language] -%}
+{%- assign items = site.articles | where: "series", page.series_id | where: 'lang', language | sort: "part" -%}
 <section class="page-hero" style="--series: {{ s.color }}">
   <div class="container narrow">
-    <a class="crumb" href="{{ '/learn/#series' | relative_url }}">← All series</a>
-    <span class="eyebrow">Series · {{ s.level }}</span>
-    <h1>{{ s.title }}</h1>
-    <p class="lead">{{ s.description }}</p>
+    <a class="crumb" href="{{ ui.home | append: '#series' | relative_url }}">← {{ ui.all_series }}</a>
+    <span class="eyebrow">{{ ui.series }} · {{ localized.level | default: s.level }}</span>
+    <h1>{{ localized.title | default: s.title }}</h1>
+    <p class="lead">{{ localized.description | default: s.description }}</p>
     <ul class="chips">{% for t in s.topics %}<li class="chip">{{ t }}</li>{% endfor %}</ul>
+    {% if s.cover %}<img class="series-cover" src="{{ s.cover | relative_url }}" alt="{{ s.cover_alt | escape }}" width="1536" height="1024">{% endif %}
   </div>
 </section>
 <section class="container narrow">
@@ -17,7 +21,7 @@ layout: learn
   <ol class="series-list">
     {% for a in items %}
     <li>
-      <a href="{{ a.url | relative_url }}">
+      <a href="{{ a.url | relative_url }}" lang="{{ a.lang }}">
         <span class="series-num">{{ a.part | default: forloop.index }}</span>
         <span>
           <strong>{{ a.title }}</strong>
@@ -29,8 +33,8 @@ layout: learn
   </ol>
   {% else %}
   <div class="empty card">
-    <h2>First lessons are on the way</h2>
-    <p class="muted">This series is being written. Follow the <a href="{{ '/learn/feed.xml' | relative_url }}">RSS feed</a> or <a href="https://www.youtube.com/wizardlk">Wizard LK</a> to catch the first part.</p>
+    <h2>{{ ui.empty_title }}</h2>
+    <p class="muted">{{ ui.empty_before }} <a href="{{ '/learn/feed.xml' | relative_url }}">RSS</a> {{ ui.or }} <a href="https://www.youtube.com/wizardlk">Wizard LK</a> {{ ui.empty_after }}</p>
   </div>
   {% endif %}
 </section>

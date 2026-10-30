@@ -1,0 +1,52 @@
+{%- assign language = page.lang | default: 'si' -%}
+{%- assign ui = site.data.learn_ui[language] -%}
+{%- assign articles = site.articles | where: 'lang', language -%}
+<section class="learn-hero">
+  <div class="hero-dots" aria-hidden="true"></div>
+  <div class="container learn-hero-grid">
+    <div>
+      <span class="eyebrow">{{ site.learn.name }} · {{ ui.by }} Tharuka</span>
+      <h1>{{ ui.hero_before }} <span class="grad-text">{{ ui.hero_emphasis }}</span> {{ ui.hero_after }}</h1>
+      <p class="lead">{{ ui.intro }}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#series">{{ ui.browse }}</a>
+        <a class="btn" href="{{ ui.articles_url | relative_url }}">{{ ui.all_articles }}</a>
+      </div>
+    </div>
+    <div class="terminal" aria-hidden="true">
+      <div class="terminal-bar"><span></span><span></span><span></span><em>~/wizard-lab</em></div>
+      <pre><span class="t-prompt">$</span> wizard learn --list
+<span class="t-muted">Loading series…</span>
+{% for s in site.data.series %}{% assign count = articles | where: 'series', s.id | size %}<span class="t-ok">✓</span> {{ s.short | append: '                    ' | slice: 0, 22 }}<span class="t-muted">{% if count > 0 %}{{ count }} {{ ui.parts }}{% else %}{{ ui.soon }}{% endif %}</span>
+{% endfor %}
+<span class="t-prompt">$</span> wizard start ai-native-development<span class="t-cursor"></span></pre>
+    </div>
+  </div>
+</section>
+
+<section id="series" class="container block">
+  <h2>{{ ui.series }}</h2>
+  <p class="muted">{{ ui.series_intro }}</p>
+  <div class="series-grid">
+    {% for s in site.data.series %}
+    {% assign count = articles | where: 'series', s.id | size %}
+    {% assign localized = s.translations[language] %}
+    <a class="series-card" href="{{ ui.series_prefix | append: s.id | append: '/' | relative_url }}" style="--series: {{ s.color }}">
+      {% if s.cover %}<img class="series-card-cover" src="{{ s.cover | relative_url }}" alt="{{ s.cover_alt | escape }}" width="1536" height="1024" loading="lazy">{% endif %}
+      <span class="series-level">{{ localized.level | default: s.level }}</span>
+      <h3>{{ localized.title | default: s.title }}</h3>
+      <p class="muted">{{ localized.description | default: s.description }}</p>
+      <ul class="chips">{% for t in s.topics %}<li class="chip">{{ t }}</li>{% endfor %}</ul>
+      <span class="series-count">{% if count > 0 %}{{ count }} {% if count == 1 %}{{ ui.article }}{% else %}{{ ui.articles }}{% endif %}{% else %}{{ ui.soon }}{% endif %} →</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="container block">
+  <h2>{{ ui.latest }}</h2>
+  <div class="article-grid">
+    {% assign latest = articles | sort: 'date' | reverse %}
+    {% for a in latest limit: 6 %}{% include article-card.html article=a %}{% endfor %}
+  </div>
+</section>

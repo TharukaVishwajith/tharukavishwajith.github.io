@@ -3,6 +3,7 @@ title: "AI යුගයේ ඔබත් “Meat Proxy” කෙනෙක් ව�
 description: "AI යුගයේ අපි අවධානය යොමු කළ යුතු වැදගත් සංකල්පයක් තමයි “Meat Proxy” කියන්නේ."
 date: 2026-10-30 09:00:00 +0530
 lang: si
+translation_key: ai-native-development-meat-proxy
 series: ai-native-development
 part: 1
 cover: /images/learn/meat-proxy.jpg

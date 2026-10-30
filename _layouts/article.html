@@ -2,7 +2,10 @@
 layout: learn
 ---
 {%- assign s = site.data.series | where: "id", page.series | first -%}
-{%- assign siblings = site.articles | where: "series", page.series | sort: "part" -%}
+{%- assign language = page.lang | default: 'si' -%}
+{%- assign ui = site.data.learn_ui[language] -%}
+{%- assign localized = s.translations[language] -%}
+{%- assign siblings = site.articles | where: "series", page.series | where: 'lang', language | sort: "part" -%}
 {%- for a in siblings -%}
   {%- if a.url == page.url -%}
     {%- assign idx = forloop.index0 -%}
@@ -11,13 +14,13 @@ layout: learn
 <article class="article"{% if page.lang %} lang="{{ page.lang }}"{% endif %} style="--series: {{ s.color | default: '#f5a623' }}">
   <header class="page-hero article-hero">
     <div class="container narrow">
-      {% if s %}<a class="crumb" href="{{ '/learn/series/' | append: s.id | append: '/' | relative_url }}">← {{ s.title }}</a>{% else %}<a class="crumb" href="{{ '/learn/' | relative_url }}">← {{ site.learn.name }}</a>{% endif %}
-      <span class="eyebrow">{% if s %}{{ s.short }}{% if page.part %} · Part {{ page.part }} of {{ siblings.size }}{% endif %}{% else %}{{ page.category | default: "Article" }}{% endif %}{% if page.level %} · {{ page.level }}{% endif %}</span>
+      {% if s %}<a class="crumb" href="{{ ui.series_prefix | append: s.id | append: '/' | relative_url }}">← {{ localized.title | default: s.title }}</a>{% else %}<a class="crumb" href="{{ ui.home | relative_url }}">← {{ site.learn.name }}</a>{% endif %}
+      <span class="eyebrow">{% if s %}{{ s.short }}{% if page.part %} · {{ ui.part }} {{ page.part }} {{ ui.of }} {{ siblings.size }}{% endif %}{% else %}{{ page.category | default: "Article" }}{% endif %}{% if page.level %} · {{ page.level }}{% endif %}</span>
       <h1>{{ page.title }}</h1>
       {% if page.description and page.lead != false %}<p class="lead">{{ page.description }}</p>{% endif %}
       <p class="article-meta">
         <img src="{{ '/images/profile.jpg' | relative_url }}" alt="" width="28" height="28">
-        <span>Tharuka Sarathchandra · {{ page.date | date: "%b %-d, %Y" }} · {{ content | number_of_words | divided_by: 200 | plus: 1 }} min read</span>
+        <span>Tharuka Sarathchandra · {{ page.date | date: "%b %-d, %Y" }} · {{ content | number_of_words | divided_by: 200 | plus: 1 }} {{ ui.min_read }}</span>
       </p>
       {% if page.cover %}<img class="article-cover" src="{{ page.cover | relative_url }}" alt="{{ page.cover_alt | default: '' }}">{% endif %}
     </div>
@@ -27,16 +30,16 @@ layout: learn
       {{ content }}
     </div>
     <aside class="toc">
-      <p class="toc-title">On this page</p>
+      <p class="toc-title">{{ ui.toc }}</p>
       <ul data-toc></ul>
     </aside>
   </div>
   <div class="container narrow">
     {% if page.tags.size > 0 %}<ul class="chips article-tags">{% for t in page.tags %}<li class="chip">#{{ t }}</li>{% endfor %}</ul>{% endif %}
     {% if s and siblings.size > 1 %}
-    <nav class="pager" aria-label="Series navigation">
-      {% if idx > 0 %}{% assign pidx = idx | minus: 1 %}{% assign prev = siblings[pidx] %}<a class="pager-prev" href="{{ prev.url | relative_url }}"><span class="muted">← Previous</span>{{ prev.title }}</a>{% else %}<span></span>{% endif %}
-      {% assign nidx = idx | plus: 1 %}{% if nidx < siblings.size %}{% assign next = siblings[nidx] %}<a class="pager-next" href="{{ next.url | relative_url }}"><span class="muted">Next →</span>{{ next.title }}</a>{% endif %}
+    <nav class="pager" aria-label="{{ ui.navigation }}">
+      {% if idx > 0 %}{% assign pidx = idx | minus: 1 %}{% assign prev = siblings[pidx] %}<a class="pager-prev" href="{{ prev.url | relative_url }}"><span class="muted">← {{ ui.previous }}</span>{{ prev.title }}</a>{% else %}<span></span>{% endif %}
+      {% assign nidx = idx | plus: 1 %}{% if nidx < siblings.size %}{% assign next = siblings[nidx] %}<a class="pager-next" href="{{ next.url | relative_url }}"><span class="muted">{{ ui.next }} →</span>{{ next.title }}</a>{% endif %}
     </nav>
     {% endif %}
   </div>

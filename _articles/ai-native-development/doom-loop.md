@@ -4,6 +4,7 @@ description: "AI Coding Agent එකකට Task එකක් දුන්නා�
 lead: false
 date: 2026-10-30 12:00:00 +0530
 lang: si
+translation_key: ai-native-development-doom-loop
 series: ai-native-development
 part: 4
 cover: /images/learn/doom-loop.jpg

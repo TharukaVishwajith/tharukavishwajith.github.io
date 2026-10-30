@@ -7,6 +7,11 @@
   color: "#f5a623"
   description: The whole AI toolkit, not just chatbots. Classic machine learning, NLP model training, fine-tuning LLMs and multimodal models, retrieval, agents and evaluation, built the way they are built at work.
   topics: [Machine learning, NLP, Fine-tuning, LLMs, Agents, Evaluation]
+  translations:
+    si:
+      title: AI Engineering, මුල සිට අගට
+      level: මධ්‍යම මට්ටම
+      description: "Chatbots වලින් ඔබ්බට යන AI දැනුම. Machine Learning, NLP, LLM Fine-tuning, Multimodal Models, Retrieval, Agents සහ Evaluation ගැන ප්‍රායෝගිකව ඉගෙන ගනිමු."
 - id: data-engineering
   title: Data Engineering, Practically
   short: Data Engineering
@@ -14,6 +19,11 @@
   color: "#ffd23f"
   description: How data actually moves. ETL and ELT, connectors, warehouses, dbt, orchestration with Airflow and the pipelines that feed analytics and AI.
   topics: [ETL & ELT, Airbyte, dbt, Airflow, Warehousing]
+  translations:
+    si:
+      title: ප්‍රායෝගික Data Engineering
+      level: ආරම්භක → මධ්‍යම මට්ටම
+      description: "Data ගමන් කරන ආකාරය. ETL සහ ELT, Connectors, Warehouses, dbt, Airflow සහ Analytics හා AI සඳහා Data Pipelines ගැන ඉගෙන ගනිමු."
 - id: ai-native-development
   title: AI Native Development
   short: AI Native Development
@@ -21,3 +31,10 @@
   color: "#111111"
   description: How software engineering changes when AI agents write much of the code. Thinking for yourself, deciding how much rigour a system needs, harness and context engineering, and reviewing AI-generated work.
   topics: [Critical thinking, Code quality, Harness engineering, Context engineering, Code review]
+  cover: /images/learn/ai-native-development.jpg
+  cover_alt: "A software engineer and AI assistant planning, building, testing and reviewing software together"
+  translations:
+    si:
+      title: AI Native Development
+      level: සියලු මට්ටම් සඳහා
+      description: "AI Agents කේත ලියන යුගයේ Software Engineering වෙනස් වන ආකාරය. ස්වාධීනව සිතීම, අවශ්‍ය Engineering Rigor එක තීරණය කිරීම, Harness සහ Context Engineering, සහ AI ලියූ Code Review කිරීම ගැන."

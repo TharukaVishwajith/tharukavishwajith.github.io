@@ -4,6 +4,7 @@ description: "AI යුගයේ වැදගත්ම දේ හැම Software
 lead: false
 date: 2026-10-30 10:00:00 +0530
 lang: si
+translation_key: ai-native-development-disposable-software
 series: ai-native-development
 part: 2
 cover: /images/learn/disposable-software.jpg

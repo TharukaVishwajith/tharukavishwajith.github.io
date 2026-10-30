@@ -1,0 +1,22 @@
+{%- assign language = page.lang | default: 'si' -%}
+{%- assign ui = site.data.learn_ui[language] -%}
+<section class="page-hero">
+  <div class="container narrow">
+    <span class="eyebrow">{{ ui.library }}</span>
+    <h1>{{ ui.all_articles }}</h1>
+    <label class="sr-only" for="filter">{{ ui.filter_label }}</label>
+    <input id="filter" class="filter" type="search" placeholder="{{ ui.filter_placeholder }}" data-filter>
+  </div>
+</section>
+<section class="container narrow">
+  <div class="article-list">
+    {% assign all = site.articles | where: 'lang', language | sort: 'date' | reverse %}
+    {% for a in all %}
+    {% assign s = site.data.series | where: 'id', a.series | first %}
+    <div data-filter-item="{{ a.title | downcase | escape }} {{ s.title | downcase | escape }} {{ a.tags | join: ' ' | downcase | escape }}">
+      {% include article-card.html article=a %}
+    </div>
+    {% endfor %}
+    <p class="muted" data-filter-empty hidden>{{ ui.no_results }}</p>
+  </div>
+</section>

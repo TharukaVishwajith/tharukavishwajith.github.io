@@ -1,51 +1,8 @@
 ---
-title: Learn software engineering, AI and data
-description: Practical article series on AI and machine learning engineering, data engineering and software engineering foundations, by Tharuka Sarathchandra.
+title: "Software, AI සහ Data ගැන ඉගෙන ගනිමු"
+description: "Software Engineering, AI සහ Data ගැන ප්‍රායෝගික ලිපි මාලා."
+lang: si
+locale: si_LK
+translation_key: learn-home
 ---
-<section class="learn-hero">
-  <div class="hero-dots" aria-hidden="true"></div>
-  <div class="container learn-hero-grid">
-  <div>
-    <span class="eyebrow">{{ site.learn.name }} · by Tharuka</span>
-    <h1>Learn to build <span class="grad-text">real</span> software, AI and data systems.</h1>
-    <p class="lead">{{ site.learn.tagline }} Written by an engineer who has trained, fine-tuned and shipped AI systems, taught at university, and explained it all to 20,000+ learners on Wizard LK.</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="#series">Browse series</a>
-      <a class="btn" href="{{ '/learn/articles/' | relative_url }}">All articles</a>
-    </div>
-  </div>
-  <div class="terminal" aria-hidden="true">
-    <div class="terminal-bar"><span></span><span></span><span></span><em>~/wizard-lab</em></div>
-    <pre><span class="t-prompt">$</span> wizard learn --list
-<span class="t-muted">Loading series…</span>
-{% for s in site.data.series %}{% assign count = site.articles | where: "series", s.id | size %}<span class="t-ok">✓</span> {{ s.short | append: "                    " | slice: 0, 22 }}<span class="t-muted">{% if count > 0 %}{{ count }} parts{% else %}soon{% endif %}</span>
-{% endfor %}
-<span class="t-prompt">$</span> wizard start ai-native-development<span class="t-cursor"></span></pre>
-  </div>
-  </div>
-</section>
-
-<section id="series" class="container block">
-  <h2>Series</h2>
-  <p class="muted">Each series is a path you can follow from part one, or dip into when you need it.</p>
-  <div class="series-grid">
-    {% for s in site.data.series %}
-    {% assign count = site.articles | where: "series", s.id | size %}
-    <a class="series-card" href="{{ '/learn/series/' | append: s.id | append: '/' | relative_url }}" style="--series: {{ s.color }}">
-      <span class="series-level">{{ s.level }}</span>
-      <h3>{{ s.title }}</h3>
-      <p class="muted">{{ s.description }}</p>
-      <ul class="chips">{% for t in s.topics %}<li class="chip">{{ t }}</li>{% endfor %}</ul>
-      <span class="series-count">{% if count > 0 %}{{ count }} article{% if count != 1 %}s{% endif %}{% else %}Coming soon{% endif %} →</span>
-    </a>
-    {% endfor %}
-  </div>
-</section>
-
-<section class="container block">
-  <h2>Latest</h2>
-  <div class="article-grid">
-    {% assign latest = site.articles | sort: "date" | reverse %}
-    {% for a in latest limit: 6 %}{% include article-card.html article=a %}{% endfor %}
-  </div>
-</section>
+{% include learn-home.html %}
