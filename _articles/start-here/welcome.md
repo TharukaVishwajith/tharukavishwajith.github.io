@@ -39,6 +39,6 @@ def answer(question: str, context: list[str]) -> str:
 
 ## Staying up to date
 
-New parts are announced on the [RSS feed](/learn/feed.xml) and on [Wizard LK](https://www.youtube.com/wizardlk). If something is unclear or you'd like a topic covered, [send me an email](mailto:tharukavishwajiths@gmail.com).
+New parts are announced on the [RSS feed](/learn/feed.xml) and on [Wizard LK](https://www.youtube.com/wizardlk). If something is unclear or you'd like a topic covered, [send me an email](mailto:{{ site.author.email }}).
 
 Pick a series and start with part one.
