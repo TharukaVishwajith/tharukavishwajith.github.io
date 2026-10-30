@@ -4,7 +4,8 @@ description: "AI යුගයේ වැදගත්ම දේ හැම Software
 lead: false
 date: 2026-10-30 10:00:00 +0530
 lang: si
-category: Perspectives
+series: ai-native-development
+part: 2
 cover: /images/learn/disposable-software.jpg
 cover_alt: A developer smiling at his laptop beside a bin of crumpled paper, under the Sinhala caption "ඉවත දැමිය හැකි මෘදුකාංග"
 tags: [DisposableSoftware, ArtificialIntelligence, SoftwareEngineering, CodeQuality]

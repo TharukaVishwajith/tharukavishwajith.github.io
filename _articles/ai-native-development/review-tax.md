@@ -4,7 +4,8 @@ description: "AI Coding Agents භාවිතයෙන් අද අපිට �
 lead: false
 date: 2026-10-30 13:00:00 +0530
 lang: si
-category: Perspectives
+series: ai-native-development
+part: 5
 cover: /images/learn/review-tax.jpg
 cover_alt: "Cover: Code Review and Review Tax in the Agentic AI era"
 tags: [AgenticAI, CodeReview, ReviewTax, SoftwareEngineering]

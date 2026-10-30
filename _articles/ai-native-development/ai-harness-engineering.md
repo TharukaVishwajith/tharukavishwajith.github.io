@@ -4,7 +4,8 @@ description: "හොඳ AI Model එකක් තිබුණා කියලා
 lead: false
 date: 2026-10-30 11:00:00 +0530
 lang: si
-category: Perspectives
+series: ai-native-development
+part: 3
 cover: /images/learn/ai-harness.jpg
 cover_alt: "Cover: AI Harness Engineering, with an agent loop of Plan, Act, Observe, Evaluate, Repeat and Tools"
 tags: [AIHarness, HarnessEngineering, AgenticAI, SoftwareEngineering]
