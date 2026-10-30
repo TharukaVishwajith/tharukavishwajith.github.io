@@ -8,6 +8,14 @@
     - Agentic AI combined with classic ML clustering to find patterns and emerging issues across conversations.
     - A custom-built AI harness lets business users ask questions of the unstructured data and get comprehensive reports, such as why conversations are dropping or what customers are struggling with right now.
     - Replaced manual report-building by an analytics team with self-serve, on-demand insight.
+- title: Knowledge and context graph platform
+  client: Virtusa AI Lab
+  tag: Knowledge engineering
+  description: Ontologies, knowledge graphs and context graphs that give agentic AI systems structured, trustworthy context, built on Google ADK and Google Cloud.
+- title: AI-driven insurance data conversion
+  client: Confidential client, health & insurance
+  tag: Agentic AI · Regulated domain
+  description: Complex, compliance-first data conversion using agentic AI workflows, ETL pipelines and models fine-tuned on Google Cloud.
 - title: RAG technical knowledge assistant
   client: ZECO Energy, Australia
   tag: Generative AI
