@@ -48,6 +48,10 @@ For translated hub or series pages, also share a `translation_key` across their 
 
 ## What you can use in an article
 
+All articles automatically include sharing controls below the metadata and after the body. They share the public URL for the language being read. Direct WhatsApp, Facebook, LinkedIn and X links work without JavaScript; Copy link and the device's Share menu are enabled when supported. If clipboard access is blocked, the reader gets a selectable link. Labels live in `_data/learn_ui.yml`, markup in `_includes/article-share.html` and behavior in `assets/js/article-share.js`.
+
+Run `node --test tools/test_article_share.cjs` to check copy, native sharing, cancellation and fallback behavior, alongside the generated-HTML checks.
+
 - `##` and `###` headings. They build the "On this page" sidebar automatically.
 - Fenced code blocks with a language (```` ```python ````). They get syntax highlighting and a copy button.
 - `> **Tip:** ...` blockquotes render as callouts.

@@ -28,6 +28,21 @@ class Page(HTMLParser):
 
 
 class BilingualPages(unittest.TestCase):
+    def test_every_article_shares_its_public_url_in_the_current_language(self):
+        for prefix in ["/learn/", "/learn/en/"]:
+            for slug in SLUGS:
+                with self.subTest(prefix=prefix, slug=slug):
+                    url = "https://tharuka.xyz" + prefix + "ai-native-development/" + slug + "/"
+                    page = Page(prefix + "ai-native-development/" + slug + "/")
+                    controls = page.attrs("section", **{"data-share-url": url})
+                    self.assertEqual(len(controls), 2)
+                    for host, param in [("wa.me", "text"), ("www.facebook.com", "u"), ("www.linkedin.com", "url"), ("twitter.com", "url")]:
+                        links = [urlsplit(a.get("href", "")) for a in page.attrs("a") if urlsplit(a.get("href", "")).netloc == host]
+                        shares = [link for link in links if url in parse_qs(link.query).get(param, [""])[0]]
+                        self.assertEqual(len(shares), 2, f"Missing {host} share links for {url}")
+                    self.assertEqual(len(page.attrs("button", **{"data-copy-link": "", "hidden": None})), 2)
+                    self.assertEqual(len(page.attrs("button", **{"data-native-share": "", "hidden": None})), 2)
+
     def test_stylesheet_urls_expire_with_each_build(self):
         for url in ["/", "/learn/", "/learn/series/ai-native-development/", "/learn/en/ai-native-development/doom-loop/"]:
             with self.subTest(url=url):

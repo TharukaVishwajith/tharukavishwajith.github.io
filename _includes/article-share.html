@@ -1,0 +1,16 @@
+{%- assign share_url = page.url | absolute_url -%}
+{%- assign encoded_url = share_url | url_encode -%}
+{%- assign share_text = page.title | append: ' ' | append: share_url | url_encode -%}
+<section class="article-share" aria-label="{{ ui.share_article | escape }}" data-article-share data-share-url="{{ share_url | escape }}" data-share-title="{{ page.title | escape }}" data-copied="{{ ui.link_copied | escape }}" data-copy-help="{{ ui.copy_help | escape }}">
+  <p class="share-label">{{ ui.share_article }}</p>
+  <div class="share-actions">
+    <button type="button" class="share-action share-primary" data-native-share="" hidden>{{ ui.share_device }}</button>
+    <button type="button" class="share-action" data-copy-link="" hidden>{{ ui.copy_link }}</button>
+    <a class="share-action" href="https://wa.me/?text={{ share_text }}" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <a class="share-action" href="https://www.facebook.com/sharer/sharer.php?u={{ encoded_url }}" target="_blank" rel="noopener noreferrer">Facebook</a>
+    <a class="share-action" href="https://www.linkedin.com/sharing/share-offsite/?url={{ encoded_url }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a class="share-action" href="https://twitter.com/intent/tweet?url={{ encoded_url }}&amp;text={{ page.title | url_encode }}" target="_blank" rel="noopener noreferrer">X</a>
+  </div>
+  <p class="share-status" role="status" aria-live="polite" data-share-status></p>
+  <input class="share-link" type="text" value="{{ share_url | escape }}" readonly aria-label="{{ ui.article_link | escape }}" data-share-link hidden>
+</section>
