@@ -257,14 +257,14 @@ title: Tharuka Sarathchandra · Senior Lead AI Engineer
             </ul>
           </div>
           <div class="learn-latest">
-            {% assign latest = site.articles | where: 'lang', 'si' | sort: "date" | reverse %}
+            {% assign latest = site.articles | where: 'lang', 'en' | sort: "date" | reverse %}
             {% for a in latest limit: 3 %}
             <a class="latest-item" href="{{ a.url | relative_url }}">
               <span>{{ a.title }}</span>
               <span class="muted">{{ a.date | date: "%b %-d, %Y" }}</span>
             </a>
             {% endfor %}
-            <a class="btn btn-primary" href="{{ site.learn.url | relative_url }}">Open {{ site.learn.name }} {% include icon.html name="arrow" %}</a>
+            <a class="btn btn-primary" href="{{ site.data.learn_ui.en.home | relative_url }}">Open {{ site.learn.name }} {% include icon.html name="arrow" %}</a>
           </div>
         </div>
       </div>
