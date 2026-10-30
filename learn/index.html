@@ -3,14 +3,25 @@ title: Learn software engineering, AI and data
 description: Practical article series on AI engineering with LLMs, data engineering and software engineering foundations, by Tharuka Sarathchandra.
 ---
 <section class="learn-hero">
-  <div class="container">
+  <div class="hero-dots" aria-hidden="true"></div>
+  <div class="container learn-hero-grid">
+  <div>
     <span class="eyebrow">{{ site.learn.name }} · by Tharuka</span>
-    <h1>Learn to build <span class="grad-text">real software, AI and data systems.</span></h1>
+    <h1>Learn to build <span class="grad-text">real</span> software, AI and data systems.</h1>
     <p class="lead">{{ site.learn.tagline }} Written by an engineer who has architected RAG and agentic AI platforms, taught at university, and explained it all to 20,000+ learners on Wizard LK.</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="#series">Browse series</a>
       <a class="btn" href="{{ '/learn/articles/' | relative_url }}">All articles</a>
     </div>
+  </div>
+  <div class="terminal" aria-hidden="true">
+    <div class="terminal-bar"><span></span><span></span><span></span><em>~/wizard-lab</em></div>
+    <pre><span class="t-prompt">$</span> wizard learn --list
+<span class="t-muted">Loading series…</span>
+{% for s in site.data.series %}{% assign count = site.articles | where: "series", s.id | size %}<span class="t-ok">✓</span> {{ s.short | append: "                    " | slice: 0, 22 }}<span class="t-muted">{% if count > 0 %}{{ count }} parts{% else %}soon{% endif %}</span>
+{% endfor %}
+<span class="t-prompt">$</span> wizard start ai-engineering<span class="t-cursor"></span></pre>
+  </div>
   </div>
 </section>
 

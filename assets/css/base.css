@@ -141,3 +141,21 @@ p { margin: 0 0 1em; }
   html { scroll-behavior: auto; }
   * { transition: none !important; animation: none !important; }
 }
+
+/* A complementary cobalt "pop" colour, used sparingly against the amber. */
+:root { --pop: #2f54eb; --pop-ink: #ffffff; }
+[data-theme="dark"] { --pop: #5b7cff; }
+
+/* Dotted backdrop used behind heroes. */
+.hero-dots {
+  position: absolute; inset: 0; pointer-events: none;
+  background-image: radial-gradient(color-mix(in srgb, var(--text) 16%, transparent) 1px, transparent 1.4px);
+  background-size: 22px 22px;
+  -webkit-mask-image: radial-gradient(ellipse at 75% 30%, #000 0%, transparent 65%);
+  mask-image: radial-gradient(ellipse at 75% 30%, #000 0%, transparent 65%);
+}
+.eyebrow .num {
+  display: inline-grid; place-items: center; min-width: 28px; height: 20px; padding: 0 6px; border-radius: 6px;
+  background: var(--text); color: var(--bg); font-size: 0.7rem; letter-spacing: 0.04em;
+}
+.eyebrow-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--brand); box-shadow: 0 0 0 4px var(--accent-soft); }
