@@ -192,6 +192,7 @@ title: Tharuka Sarathchandra · AI & Data Engineer
               <li>
                 {% if pub.url %}<a href="{{ pub.url }}">{{ pub.title }}</a>{% else %}<span>{{ pub.title }}</span>{% endif %}
                 <span class="muted">{{ pub.venue }}{% if pub.year %} · {{ pub.year }}{% endif %}{% unless pub.url %} · link coming soon{% endunless %}</span>
+                {% if pub.note %}<span class="pub-note">{{ pub.note }}</span>{% endif %}
               </li>
               {% endfor %}
             </ul>
