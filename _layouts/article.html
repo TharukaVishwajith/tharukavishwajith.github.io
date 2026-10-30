@@ -35,6 +35,7 @@ layout: learn
     </aside>
   </div>
   <div class="container narrow">
+    {% include article-share.html %}
     {% if page.tags.size > 0 %}<ul class="chips article-tags">{% for t in page.tags %}<li class="chip">#{{ t }}</li>{% endfor %}</ul>{% endif %}
     {% if s and siblings.size > 1 %}
     <nav class="pager" aria-label="{{ ui.navigation }}">

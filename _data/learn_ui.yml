@@ -35,6 +35,12 @@ en:
   next: Next
   min_read: min read
   navigation: Series navigation
+  share_article: Share this article
+  share_device: Share…
+  copy_link: Copy link
+  link_copied: Link copied!
+  copy_help: Select and copy the link below.
+  article_link: Article link
 si:
   home: /learn/
   articles_url: /learn/articles/
@@ -72,3 +78,9 @@ si:
   next: ඊළඟ ලිපිය
   min_read: මිනිත්තු කියවීමක්
   navigation: ලිපි මාලාවේ මඟපෙන්වීම
+  share_article: මෙම ලිපිය බෙදාගන්න
+  share_device: බෙදාගන්න…
+  copy_link: සබැඳිය පිටපත් කරන්න
+  link_copied: සබැඳිය පිටපත් කළා!
+  copy_help: පහත සබැඳිය තෝරා පිටපත් කරන්න.
+  article_link: ලිපියේ සබැඳිය
