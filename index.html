@@ -29,7 +29,7 @@ title: Tharuka Sarathchandra · AI & Data Engineer
       <div class="hero-dots" aria-hidden="true"></div>
       <div class="container hero-grid">
         <div>
-          <span class="eyebrow"><span class="eyebrow-dot"></span>Senior Software Engineer · Applied AI & Data</span>
+          <span class="eyebrow"><span class="eyebrow-dot"></span>Machine Learning Engineer · AI & Data</span>
           <h1>I build AI systems that turn <span class="grad-text">messy data into answers.</span></h1>
           <p class="lead">I'm Tharuka Sarathchandra. For more than eight years I've shipped software, from Spring Boot microservices and data pipelines to machine learning, NLP and generative AI systems that I've trained, fine-tuned and taken to production. I've also lectured at the University of Kelaniya and teach 20,000+ learners on Wizard LK.</p>
           <div class="hero-actions">
@@ -69,7 +69,7 @@ title: Tharuka Sarathchandra · AI & Data Engineer
           <span class="eyebrow"><span class="num">01</span>About</span>
           <h2>From a vague problem to a <span class="grad-text">working solution.</span></h2>
           <p>The work I enjoy most starts with a fuzzy requirement: a team knows something is broken or possible, but not what to build. I sit with the people who have the problem, work out what they actually need, propose a solution across software, data and AI, and then build and deploy it with them.</p>
-          <p>That's the forward-deployed way of working, and my background covers the whole stack it needs. I trained as a software engineer, did my master's in big data, and work as an AI engineer across the full range of the field: classic machine learning such as classification and clustering, NLP models I've trained for intent classification, entity recognition and PII redaction, fine-tuning LLMs and multimodal models, and the agentic and retrieval systems built on top of them.</p>
+          <p>That's the forward-deployed way of working, and my background covers the whole stack it needs. I trained as a software engineer, did my master's in big data, and work as an AI engineer across the full range of the field: classic machine learning such as classification and clustering, NLP models I've trained for intent classification, entity recognition and PII redaction, fine-tuning LLMs and multimodal models, and the agentic and retrieval systems built on top of them. I also know decentralized systems well, having researched and published on a blockchain-based social network built with Ethereum and Solidity.</p>
           <p>Years of lecturing, mentoring and teaching on Wizard LK mean I can explain a design to an engineer, a manager or a customer in their own terms, which is also why I'm building <a href="{{ site.learn.url | relative_url }}">{{ site.learn.name }}</a>.</p>
           <div class="stack" aria-label="The stack I work across">
             <div class="stack-layer layer-ai"><strong>AI engineering</strong><span>ML, NLP, model training & fine-tuning, generative AI · Rozie AI</span></div>
@@ -183,6 +183,18 @@ title: Tharuka Sarathchandra · AI & Data Engineer
               <li>DeepLearning.AI Data Engineering Professional Certificate <span class="muted">2024</span></li>
               <li>Machine Learning in Production <span class="muted">2023</span></li>
               <li>AWS Academy Educator <span class="muted">2022–2024</span></li>
+            </ul>
+          </article>
+          <article class="card edu">
+            <h3>Publications</h3>
+            <ul class="pubs">
+              {% for pub in site.data.publications %}
+              <li>
+                {% if pub.url %}<a href="{{ pub.url }}">{{ pub.title }}</a>{% else %}<span>{{ pub.title }}</span>{% endif %}
+                <span class="muted">{{ pub.venue }}{% if pub.year %} · {{ pub.year }}{% endif %}{% unless pub.url %} · link coming soon{% endunless %}</span>
+                {% if pub.note %}<span class="pub-note">{{ pub.note }}</span>{% endif %}
+              </li>
+              {% endfor %}
             </ul>
           </article>
         </div>

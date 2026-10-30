@@ -1,0 +1,9 @@
+# Papers shown under Education on the home page. Leave `url` empty until a link exists.
+- title: A Decentralized Social Network Architecture
+  venue: IEEE Xplore
+  note: Built on decentralized technologies including Ethereum, Solidity smart contracts and Whisper messaging.
+  url: https://ieeexplore.ieee.org/document/9568334
+- title: Identifying Sri Lankan Traditional Rice Species using Deep Learning
+  venue: M.Sc. thesis, Robert Gordon University
+  year: 2021
+  url:
