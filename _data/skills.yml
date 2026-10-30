@@ -10,7 +10,7 @@
   items: [PostgreSQL, MySQL, MongoDB Atlas, DynamoDB, Elasticsearch]
 - group: Languages & frameworks
   items: [Python, Java, JavaScript, FastAPI, Falcon, Spring Boot, Scrapy]
-- group: Decentralized systems
-  items: [Ethereum, Solidity, Smart contracts, Whisper]
+- group: Blockchain & dApps
+  items: [Blockchain, dApps, Ethereum, Solidity, Smart contracts, Whisper, Web3]
 - group: Cloud & DevOps
   items: [AWS, Azure, Docker, CloudFormation, GitHub Actions, CI/CD]
