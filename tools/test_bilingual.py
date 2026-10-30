@@ -117,7 +117,8 @@ class BilingualPages(unittest.TestCase):
         page = Page("/")
         articles = [a["href"] for a in page.attrs("a") if re.match(r"^/learn/(?:en/)?ai-native-development/", a.get("href", ""))]
         self.assertEqual(len(articles), 3)
-        self.assertTrue(all(url.startswith("/learn/ai-native-development/") for url in articles))
+        self.assertTrue(page.attrs("a", href="/learn/en/", **{"class": "btn btn-primary"}))
+        self.assertTrue(all(url.startswith("/learn/en/ai-native-development/") for url in articles))
 
 
 if __name__ == "__main__":

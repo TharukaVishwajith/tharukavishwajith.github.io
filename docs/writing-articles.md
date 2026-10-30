@@ -36,7 +36,7 @@ Intro paragraph...
 Body text, code, images...
 ```
 
-3. Commit and push. The article appears on its language's hub home page, series page and "All articles" list, and in the shared RSS feed. The portfolio's "Latest" section lists the original Sinhala articles once.
+3. Commit and push. The article appears on its language's hub home page, series page and "All articles" list, and in the shared RSS feed. The portfolio's "Latest" section lists English articles once and opens the English learning hub.
 
 ## Add an English translation
 
