@@ -65,6 +65,13 @@
 }
 .filter:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
 
+.article-card.has-cover { padding-top: 0; overflow: hidden; }
+.article-card-cover { width: calc(100% + 44px); max-width: none; margin: 0 -22px 10px -25px; aspect-ratio: 16 / 9; object-fit: cover; object-position: center top; }
+.article-cover { width: 100%; height: auto; max-height: 640px; object-fit: contain; margin-top: 28px; border-radius: var(--radius); border: 1px solid var(--border); background: var(--bg-soft); }
+/* Sinhala reads better a touch larger with looser leading. */
+[lang="si"] .prose { font-size: 1.1rem; line-height: 1.95; }
+[lang="si"] h1, [lang="si"] h3 { line-height: 1.35; letter-spacing: 0; }
+
 /* Series page */
 .series-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
 .series-list a {
@@ -120,6 +127,8 @@
 .prose table { width: 100%; border-collapse: collapse; margin: 1.5em 0; font-size: 0.95rem; display: block; overflow-x: auto; }
 .prose th, .prose td { padding: 10px 12px; border: 1px solid var(--border); text-align: left; }
 .prose th { background: var(--bg-soft); }
+.prose table.defs thead { display: none; }
+.prose table.defs td:first-child { white-space: nowrap; background: var(--bg-soft); }
 .prose hr { border: 0; border-top: 1px solid var(--border); margin: 2.5em 0; }
 .prose code { font-family: var(--font-mono); font-size: 0.88em; }
 .prose :not(pre) > code { padding: 2px 6px; border-radius: 6px; background: var(--bg-soft); border: 1px solid var(--border); }

@@ -2,6 +2,7 @@
 title: "Welcome to Wizard Lab: how these series work"
 description: What you'll find here, how the series are organised, and how to get the most out of them.
 date: 2026-10-30
+category: Start here
 tags: [start-here]
 ---
 
