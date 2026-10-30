@@ -1,8 +1,8 @@
 # Site-wide settings for tharuka.xyz (built by GitHub Pages with Jekyll).
 title: Tharuka Sarathchandra
 description: >-
-  Senior Software Engineer working on applied AI, LLM systems and data engineering.
-  Builder of agentic AI and RAG platforms, former lecturer and creator of Wizard LK.
+  Senior Software Engineer working across machine learning, NLP, generative AI and data engineering.
+  Trains, fine-tunes and deploys AI systems; former lecturer and creator of Wizard LK.
 url: "https://tharuka.xyz"
 baseurl: ""
 lang: en

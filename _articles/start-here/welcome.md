@@ -11,7 +11,7 @@ For years I've explained software, AI and data on [Wizard LK](https://www.youtub
 
 Everything here is organised into **series**: paths you can follow from part one, or dip into when you need a specific idea.
 
-- **AI Engineering with LLMs**: from your first model call to production RAG, hybrid search, re-ranking, evaluation and agents.
+- **AI Engineering, End to End**: classic machine learning, NLP model training, fine-tuning LLMs and multimodal models, retrieval, agents and evaluation.
 - **Data Engineering, Practically**: ETL and ELT, connectors, warehouses, dbt and orchestration, the plumbing that feeds analytics and AI.
 - **Software Engineering Foundations**: APIs, databases, architecture, testing and cloud deployment.
 

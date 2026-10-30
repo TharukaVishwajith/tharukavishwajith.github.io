@@ -1,5 +1,9 @@
-- group: AI & ML
-  items: [LLMs, RAG, Agentic AI, LangChain, LangGraph, Pydantic AI, NLP, TensorFlow, YOLO]
+- group: Machine learning & NLP
+  items: [Classification, Clustering, Unsupervised learning, Model training, Fine-tuning, NLP, Named entity recognition, Intent classification, PII redaction, TensorFlow]
+- group: Generative AI
+  items: [LLMs, LLM fine-tuning, Multimodal models, Agentic AI, Google ADK, RAG, LangChain, LangGraph, Pydantic AI]
+- group: Computer vision
+  items: [YOLO, Object detection, OpenCV, Amazon Rekognition]
 - group: Data engineering
   items: [ETL pipelines, Data warehousing, Airbyte, dbt, Apache Airflow, DuckDB, Snowflake, Grafana]
 - group: Databases & search

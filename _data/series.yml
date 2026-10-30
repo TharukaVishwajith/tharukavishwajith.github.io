@@ -1,12 +1,12 @@
 # Learning hub series. Each article's front matter sets `series:` to one of these ids.
 # To add a series: add an entry here and a page in learn/series/<id>.md (copy an existing one).
 - id: ai-engineering
-  title: AI Engineering with LLMs
+  title: AI Engineering, End to End
   short: AI Engineering
   level: Intermediate
   color: "#f5a623"
-  description: From your first LLM call to production RAG and agentic systems. Prompting, retrieval, hybrid search, re-ranking, evaluation and agents, built the way they are built at work.
-  topics: [LLM fundamentals, RAG, Hybrid search, Agents, Evaluation]
+  description: The whole AI toolkit, not just chatbots. Classic machine learning, NLP model training, fine-tuning LLMs and multimodal models, retrieval, agents and evaluation, built the way they are built at work.
+  topics: [Machine learning, NLP, Fine-tuning, LLMs, Agents, Evaluation]
 - id: data-engineering
   title: Data Engineering, Practically
   short: Data Engineering

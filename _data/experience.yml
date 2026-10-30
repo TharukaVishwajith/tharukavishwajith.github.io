@@ -3,14 +3,15 @@
   company: Rozie Labs (Rozie AI Inc.)
   location: Colombo, Sri Lanka
   dates: Jan 2023 – Jul 2026
-  summary: Architected and led agentic AI, RAG and conversation-analytics platforms for enterprise customers.
+  summary: Trained and deployed ML and NLP models, and architected and led generative AI and conversation-analytics platforms for enterprise customers.
   highlights:
+    - Trained and fine-tuned models across the AI stack: classification and clustering, NLP models for intent classification, named entity recognition and PII redaction, and LLM and multimodal fine-tuning.
     - Architected and led an agentic AI platform for business insight generation, with end-to-end ETL pipelines that let users ask questions in natural language and get domain-specific answers and visualizations.
     - Architected and led an enterprise RAG application combining LLMs with hybrid search and re-ranking for accurate, context-aware access to organizational knowledge.
     - Led the architecture and research behind a scalable system analysing 30,000+ live contact-center conversations a day with ML and generative AI.
     - Designed the data connector framework and ingestion pipelines (Airbyte, LangChain, Unstructured), and optimized Elasticsearch and MongoDB retrieval.
     - Mentored junior engineers on engineering practice and on designing and deploying cloud AI solutions.
-  stack: [Python, FastAPI, Falcon, LangChain, LangGraph, Elasticsearch, MongoDB, Airbyte, AWS, Azure]
+  stack: [Python, TensorFlow, Google ADK, LangChain, LangGraph, FastAPI, Falcon, Elasticsearch, MongoDB, Airbyte, AWS, Azure]
 
 - role: Lecturer, Department of Software Engineering
   company: University of Kelaniya

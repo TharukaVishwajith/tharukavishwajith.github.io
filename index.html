@@ -31,7 +31,7 @@ title: Tharuka Sarathchandra · AI & Data Engineer
         <div>
           <span class="eyebrow"><span class="eyebrow-dot"></span>Senior Software Engineer · Applied AI & Data</span>
           <h1>I build AI systems that turn <span class="grad-text">messy data into answers.</span></h1>
-          <p class="lead">I'm Tharuka Sarathchandra. For more than eight years I've shipped software, from Spring Boot microservices to agentic AI platforms, RAG and the data pipelines underneath them. I've also lectured at the University of Kelaniya and teach 20,000+ learners on Wizard LK.</p>
+          <p class="lead">I'm Tharuka Sarathchandra. For more than eight years I've shipped software, from Spring Boot microservices and data pipelines to machine learning, NLP and generative AI systems that I've trained, fine-tuned and taken to production. I've also lectured at the University of Kelaniya and teach 20,000+ learners on Wizard LK.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#experience">See my work {% include icon.html name="arrow" %}</a>
             <a class="btn" href="{{ site.learn.url | relative_url }}">Learn with me</a>
@@ -56,7 +56,7 @@ title: Tharuka Sarathchandra · AI & Data Engineer
 
     <div class="marquee" aria-label="Technologies I work with">
       <div class="marquee-track">
-        {% assign tech = "Python,LangGraph,RAG,FastAPI,Elasticsearch,Airbyte,dbt,Airflow,AWS,Azure,MongoDB,PostgreSQL,Spring Boot,TensorFlow,Pydantic AI,DuckDB" | split: "," %}
+        {% assign tech = "Python,TensorFlow,NLP,Fine-tuning,Google ADK,LangGraph,FastAPI,Elasticsearch,Airbyte,dbt,Airflow,AWS,Azure,MongoDB,PostgreSQL,Spring Boot,Pydantic AI,YOLO,DuckDB" | split: "," %}
         {% for round in (1..2) %}
         <ul{% if round == 2 %} aria-hidden="true"{% endif %}>{% for t in tech %}<li>{{ t }}</li>{% endfor %}</ul>
         {% endfor %}
@@ -69,10 +69,10 @@ title: Tharuka Sarathchandra · AI & Data Engineer
           <span class="eyebrow"><span class="num">01</span>About</span>
           <h2>From a vague problem to a <span class="grad-text">working solution.</span></h2>
           <p>The work I enjoy most starts with a fuzzy requirement: a team knows something is broken or possible, but not what to build. I sit with the people who have the problem, work out what they actually need, propose a solution across software, data and AI, and then build and deploy it with them.</p>
-          <p>That's the forward-deployed way of working, and my background covers the whole stack it needs. I trained as a software engineer, did my master's in big data, and most recently architected and led agentic AI and RAG platforms at Rozie AI, from data ingestion to production LLM systems for enterprise customers.</p>
+          <p>That's the forward-deployed way of working, and my background covers the whole stack it needs. I trained as a software engineer, did my master's in big data, and work as an AI engineer across the full range of the field: classic machine learning such as classification and clustering, NLP models I've trained for intent classification, entity recognition and PII redaction, fine-tuning LLMs and multimodal models, and the agentic and retrieval systems built on top of them.</p>
           <p>Years of lecturing, mentoring and teaching on Wizard LK mean I can explain a design to an engineer, a manager or a customer in their own terms, which is also why I'm building <a href="{{ site.learn.url | relative_url }}">{{ site.learn.name }}</a>.</p>
           <div class="stack" aria-label="The stack I work across">
-            <div class="stack-layer layer-ai"><strong>AI engineering</strong><span>LLMs, RAG, agents, evaluation · Rozie AI</span></div>
+            <div class="stack-layer layer-ai"><strong>AI engineering</strong><span>ML, NLP, model training & fine-tuning, generative AI · Rozie AI</span></div>
             <div class="stack-layer layer-data"><strong>Data engineering</strong><span>Pipelines, warehouses, connectors · M.Sc. Big Data</span></div>
             <div class="stack-layer layer-sw"><strong>Software engineering</strong><span>APIs, services, cloud, architecture · B.Sc. SE</span></div>
           </div>
@@ -91,7 +91,7 @@ title: Tharuka Sarathchandra · AI & Data Engineer
           <li class="card focus-card">
             <span class="step">03</span>
             <h3>Build & deploy</h3>
-            <p class="muted">Prototype fast, then ship to production on AWS or Azure: RAG and agentic systems, ETL pipelines, APIs and integrations with existing platforms.</p>
+            <p class="muted">Prototype fast, then ship to production on AWS or Azure: trained and fine-tuned models, generative AI applications, ETL pipelines, APIs and integrations.</p>
           </li>
           <li class="card focus-card">
             <span class="step">04</span>
@@ -135,7 +135,7 @@ title: Tharuka Sarathchandra · AI & Data Engineer
         <div class="section-head reveal">
           <span class="eyebrow"><span class="num">03</span>Selected work</span>
           <h2>Projects I've architected</h2>
-          <p class="muted">Freelance and independent systems, from RAG assistants to computer vision.</p>
+          <p class="muted">Freelance and independent systems, from computer vision to generative AI.</p>
         </div>
         <div class="project-grid">
           {% for p in site.data.projects %}
