@@ -8,17 +8,18 @@ layout: learn
     {%- assign idx = forloop.index0 -%}
   {%- endif -%}
 {%- endfor -%}
-<article class="article" style="--series: {{ s.color | default: '#f5a623' }}">
+<article class="article"{% if page.lang %} lang="{{ page.lang }}"{% endif %} style="--series: {{ s.color | default: '#f5a623' }}">
   <header class="page-hero article-hero">
     <div class="container narrow">
       {% if s %}<a class="crumb" href="{{ '/learn/series/' | append: s.id | append: '/' | relative_url }}">← {{ s.title }}</a>{% else %}<a class="crumb" href="{{ '/learn/' | relative_url }}">← {{ site.learn.name }}</a>{% endif %}
-      <span class="eyebrow">{% if s %}{{ s.short }}{% if page.part %} · Part {{ page.part }} of {{ siblings.size }}{% endif %}{% else %}Start here{% endif %}{% if page.level %} · {{ page.level }}{% endif %}</span>
+      <span class="eyebrow">{% if s %}{{ s.short }}{% if page.part %} · Part {{ page.part }} of {{ siblings.size }}{% endif %}{% else %}{{ page.category | default: "Article" }}{% endif %}{% if page.level %} · {{ page.level }}{% endif %}</span>
       <h1>{{ page.title }}</h1>
-      {% if page.description %}<p class="lead">{{ page.description }}</p>{% endif %}
+      {% if page.description and page.lead != false %}<p class="lead">{{ page.description }}</p>{% endif %}
       <p class="article-meta">
         <img src="{{ '/images/profile.jpg' | relative_url }}" alt="" width="28" height="28">
         <span>Tharuka Sarathchandra · {{ page.date | date: "%b %-d, %Y" }} · {{ content | number_of_words | divided_by: 200 | plus: 1 }} min read</span>
       </p>
+      {% if page.cover %}<img class="article-cover" src="{{ page.cover | relative_url }}" alt="{{ page.cover_alt | default: '' }}">{% endif %}
     </div>
   </header>
   <div class="container article-layout">

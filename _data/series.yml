@@ -14,10 +14,10 @@
   color: "#ffd23f"
   description: How data actually moves. ETL and ELT, connectors, warehouses, dbt, orchestration with Airflow and the pipelines that feed analytics and AI.
   topics: [ETL & ELT, Airbyte, dbt, Airflow, Warehousing]
-- id: software-engineering
-  title: Software Engineering Foundations
-  short: Software Engineering
-  level: Beginner
+- id: ai-native-development
+  title: AI Native Development
+  short: AI Native Development
+  level: All levels
   color: "#111111"
-  description: The craft behind reliable systems. APIs, databases, architecture, testing and cloud deployment for people starting out or levelling up.
-  topics: [APIs, Databases, Architecture, Testing, Cloud]
+  description: How software engineering changes when AI agents write much of the code. Thinking for yourself, deciding how much rigour a system needs, harness and context engineering, and reviewing AI-generated work.
+  topics: [Critical thinking, Code quality, Harness engineering, Context engineering, Code review]

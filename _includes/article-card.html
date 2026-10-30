@@ -1,6 +1,7 @@
 {%- assign s = site.data.series | where: "id", include.article.series | first -%}
-<a class="article-card" href="{{ include.article.url | relative_url }}" style="--series: {{ s.color | default: '#f5a623' }}">
-  <span class="article-card-series">{% if s %}{{ s.short }}{% if include.article.part %} · Part {{ include.article.part }}{% endif %}{% else %}Start here{% endif %}</span>
+<a class="article-card{% if include.article.cover %} has-cover{% endif %}" href="{{ include.article.url | relative_url }}" style="--series: {{ s.color | default: '#f5a623' }}"{% if include.article.lang %} lang="{{ include.article.lang }}"{% endif %}>
+  {% if include.article.cover %}<img class="article-card-cover" src="{{ include.article.cover | relative_url }}" alt="" loading="lazy">{% endif %}
+  <span class="article-card-series">{% if s %}{{ s.short }}{% if include.article.part %} · Part {{ include.article.part }}{% endif %}{% else %}{{ include.article.category | default: "Article" }}{% endif %}</span>
   <h3>{{ include.article.title }}</h3>
   {% if include.article.description %}<p class="muted">{{ include.article.description }}</p>{% endif %}
   <span class="article-card-meta">{{ include.article.date | date: "%b %-d, %Y" }} · {{ include.article.content | number_of_words | divided_by: 200 | plus: 1 }} min read</span>
