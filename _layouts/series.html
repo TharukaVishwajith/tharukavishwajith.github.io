@@ -1,0 +1,36 @@
+---
+layout: learn
+---
+{%- assign s = site.data.series | where: "id", page.series_id | first -%}
+{%- assign items = site.articles | where: "series", page.series_id | sort: "part" -%}
+<section class="page-hero" style="--series: {{ s.color }}">
+  <div class="container narrow">
+    <a class="crumb" href="{{ '/learn/#series' | relative_url }}">← All series</a>
+    <span class="eyebrow">Series · {{ s.level }}</span>
+    <h1>{{ s.title }}</h1>
+    <p class="lead">{{ s.description }}</p>
+    <ul class="chips">{% for t in s.topics %}<li class="chip">{{ t }}</li>{% endfor %}</ul>
+  </div>
+</section>
+<section class="container narrow">
+  {% if items.size > 0 %}
+  <ol class="series-list">
+    {% for a in items %}
+    <li>
+      <a href="{{ a.url | relative_url }}">
+        <span class="series-num">{{ a.part | default: forloop.index }}</span>
+        <span>
+          <strong>{{ a.title }}</strong>
+          {% if a.description %}<span class="muted">{{ a.description }}</span>{% endif %}
+        </span>
+      </a>
+    </li>
+    {% endfor %}
+  </ol>
+  {% else %}
+  <div class="empty card">
+    <h2>First lessons are on the way</h2>
+    <p class="muted">This series is being written. Follow the <a href="{{ '/learn/feed.xml' | relative_url }}">RSS feed</a> or <a href="https://www.youtube.com/wizardlk">Wizard LK</a> to catch the first part.</p>
+  </div>
+  {% endif %}
+</section>

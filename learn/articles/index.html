@@ -1,0 +1,24 @@
+---
+title: All articles
+description: Every article in the learning hub, newest first.
+---
+<section class="page-hero">
+  <div class="container narrow">
+    <span class="eyebrow">Library</span>
+    <h1>All articles</h1>
+    <label class="sr-only" for="filter">Filter articles</label>
+    <input id="filter" class="filter" type="search" placeholder="Filter by title, series or tag…" data-filter>
+  </div>
+</section>
+<section class="container narrow">
+  <div class="article-list">
+    {% assign all = site.articles | sort: "date" | reverse %}
+    {% for a in all %}
+    {% assign s = site.data.series | where: "id", a.series | first %}
+    <div data-filter-item="{{ a.title | downcase | escape }} {{ s.title | downcase }} {{ a.tags | join: ' ' | downcase }}">
+      {% include article-card.html article=a %}
+    </div>
+    {% endfor %}
+    <p class="muted" data-filter-empty hidden>No articles match that filter.</p>
+  </div>
+</section>

@@ -1,0 +1,10 @@
+- group: AI & ML
+  items: [LLMs, RAG, Agentic AI, LangChain, LangGraph, Pydantic AI, NLP, TensorFlow, YOLO]
+- group: Data engineering
+  items: [ETL pipelines, Data warehousing, Airbyte, dbt, Apache Airflow, DuckDB, Snowflake, Grafana]
+- group: Databases & search
+  items: [PostgreSQL, MySQL, MongoDB Atlas, DynamoDB, Elasticsearch]
+- group: Languages & frameworks
+  items: [Python, Java, JavaScript, FastAPI, Falcon, Spring Boot, Scrapy]
+- group: Cloud & DevOps
+  items: [AWS, Azure, Docker, CloudFormation, GitHub Actions, CI/CD]

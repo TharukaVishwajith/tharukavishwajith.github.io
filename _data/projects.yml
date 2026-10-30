@@ -1,0 +1,33 @@
+# Selected freelance and independent work shown on the home page.
+- title: RAG technical knowledge assistant
+  client: ZECO Energy, Australia
+  tag: Generative AI
+  description: A RAG-powered assistant that gives electrical and energy technicians instant, context-aware technical guidance.
+- title: Sensor analytics platform
+  client: MillenniumIT ESP
+  tag: Data platform
+  description: Sensor management, data monitoring and analytics platform for streams of device data.
+- title: Fleet, order and payment tracking
+  client: International Distillers Limited
+  tag: Enterprise
+  description: Real-time vehicle entry/exit, route and stop tracking, usage history, BATA management and payment approvals.
+- title: AI identity verification
+  client: UK dating platform
+  tag: Computer vision
+  description: Image and video verification with Amazon Rekognition to confirm users are who they say they are.
+- title: ERP asset transfer integration
+  client: Leading private bank, Sri Lanka
+  tag: Enterprise
+  description: Architected and led the Asset Transfer module integration into the bank's ERP, streamlining asset workflows.
+- title: Sinhala number plate detection
+  client: Independent
+  tag: Computer vision
+  description: YOLO-based detection and extraction of localized military vehicle number plates for automated identification.
+- title: Automated coconut counting
+  client: Independent
+  tag: Computer vision
+  description: Real-time YOLO object detection to support agricultural productivity and resource monitoring.
+- title: Traditional rice species identification
+  client: M.Sc. thesis
+  tag: Deep learning
+  description: Classifying Sri Lankan traditional rice varieties with deep learning using TensorFlow, OpenCV and Flask.
