@@ -10,6 +10,7 @@ from urllib.parse import parse_qs, urlsplit
 
 SITE = Path("_site")
 SLUGS = ["meat-proxy", "disposable-software", "ai-harness-engineering", "doom-loop", "review-tax", "software-factory", "beyond-coding", "product-and-forward-deployed-engineers", "ai-native-observability", "engineering-judgment"]
+ARTICLE_PATHS = ["ai-native-development/" + slug for slug in SLUGS] + ["ai-engineering/ai-evals"]
 
 
 class Page(HTMLParser):
@@ -30,10 +31,10 @@ class Page(HTMLParser):
 class BilingualPages(unittest.TestCase):
     def test_every_article_shares_its_public_url_in_the_current_language(self):
         for prefix in ["/learn/", "/learn/en/"]:
-            for slug in SLUGS:
-                with self.subTest(prefix=prefix, slug=slug):
-                    url = "https://tharuka.xyz" + prefix + "ai-native-development/" + slug + "/"
-                    page = Page(prefix + "ai-native-development/" + slug + "/")
+            for article_path in ARTICLE_PATHS:
+                with self.subTest(prefix=prefix, article=article_path):
+                    url = "https://tharuka.xyz" + prefix + article_path + "/"
+                    page = Page(prefix + article_path + "/")
                     controls = page.attrs("section", **{"data-share-url": url})
                     self.assertEqual(len(controls), 1)
                     for host, param in [("wa.me", "text"), ("www.facebook.com", "u"), ("www.linkedin.com", "url"), ("twitter.com", "url")]:
@@ -53,16 +54,16 @@ class BilingualPages(unittest.TestCase):
                     self.assertTrue(parse_qs(style.query).get("v"), f"{url}: {style.path} can reuse stale CSS")
 
     def test_all_articles_have_reciprocal_language_links(self):
-        for slug in SLUGS:
+        for article_path in ARTICLE_PATHS:
             for lang, prefix, other_lang, other_prefix in [("si", "/learn/", "en", "/learn/en/"), ("en", "/learn/en/", "si", "/learn/")]:
-                with self.subTest(slug=slug, lang=lang):
-                    page = Page(prefix + "ai-native-development/" + slug + "/")
+                with self.subTest(article=article_path, lang=lang):
+                    page = Page(prefix + article_path + "/")
                     self.assertTrue(page.attrs("html", lang=lang))
-                    target = other_prefix + "ai-native-development/" + slug + "/"
+                    target = other_prefix + article_path + "/"
                     self.assertTrue(page.attrs("a", hreflang=other_lang, href=target))
                     self.assertTrue(page.attrs("a", hreflang=lang, **{"aria-current": "page"}))
                     self.assertTrue(page.attrs("link", rel="alternate", hreflang=other_lang, href="https://tharuka.xyz" + target))
-                    self.assertTrue(page.attrs("link", rel="canonical", href="https://tharuka.xyz" + prefix + "ai-native-development/" + slug + "/"))
+                    self.assertTrue(page.attrs("link", rel="canonical", href="https://tharuka.xyz" + prefix + article_path + "/"))
 
     def test_lists_show_expected_parts_in_the_selected_language(self):
         for lang, prefix in [("si", "/learn/"), ("en", "/learn/en/")]:
@@ -70,7 +71,7 @@ class BilingualPages(unittest.TestCase):
                 with self.subTest(lang=lang, suffix=suffix):
                     page = Page(prefix + suffix)
                     articles = [a["href"] for a in page.attrs("a") if re.match(r"^/learn/(?:en/)?ai-native-development/", a.get("href", ""))]
-                    expected_count = 6 if suffix == "" else 10
+                    expected_count = 5 if suffix == "" else 10
                     self.assertEqual(len(articles), expected_count)
                     self.assertEqual(len(set(articles)), expected_count)
                     self.assertTrue(all(url.startswith(prefix + "ai-native-development/") for url in articles))
@@ -116,10 +117,26 @@ class BilingualPages(unittest.TestCase):
 
     def test_portfolio_latest_does_not_duplicate_translations(self):
         page = Page("/")
-        articles = [a["href"] for a in page.attrs("a") if re.match(r"^/learn/(?:en/)?ai-native-development/", a.get("href", ""))]
+        articles = [a["href"] for a in page.attrs("a") if re.match(r"^/learn/(?:en/)?(?:ai-native-development|ai-engineering)/", a.get("href", ""))]
         self.assertEqual(len(articles), 3)
         self.assertTrue(page.attrs("a", href="/learn/en/", **{"class": "btn btn-primary"}))
-        self.assertTrue(all(url.startswith("/learn/en/ai-native-development/") for url in articles))
+        self.assertTrue(all(url.startswith("/learn/en/") for url in articles))
+        self.assertIn("/learn/en/ai-engineering/ai-evals/", articles)
+
+    def test_ai_evals_belongs_to_ai_engineering(self):
+        for prefix in ["/learn/", "/learn/en/"]:
+            with self.subTest(prefix=prefix):
+                article_url = prefix + "ai-engineering/ai-evals/"
+                page = Page(article_url)
+                self.assertTrue(page.attrs("a", href=prefix + "series/ai-engineering/", **{"class": "crumb"}))
+                self.assertTrue(page.attrs("img", src="/images/learn/ai-evals.png"))
+                self.assertFalse(page.attrs("a", **{"class": "pager-prev"}))
+                self.assertFalse(page.attrs("a", **{"class": "pager-next"}))
+                for listing in ["", "articles/", "series/ai-engineering/"]:
+                    self.assertTrue(Page(prefix + listing).attrs("a", href=article_url))
+                self.assertFalse(Page(prefix + "series/ai-native-development/").attrs("a", href=article_url))
+                if prefix == "/learn/en/":
+                    self.assertIn("Part 1 of 1", page.source)
 
 
 if __name__ == "__main__":
